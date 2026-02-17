@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Tracker App — Receipt Scanner & CSV Export | TripTrackAI</title>
+<meta name="description" content="TripTrackAI is the best expense tracker app for 2026. Scan receipts with OCR, track travel expenses automatically, export to CSV. Perfect for business travelers and expense reports.">
+<meta name="keywords" content="expense tracker app, receipt scanner app, travel expense tracker, expense report app, receipt OCR, CSV expense export, business expense tracker">
+<link rel="canonical" href="https://triptrackai.com/expense-tracker">
+<link rel="icon" type="image/png" href="img/icon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://triptrackai.com/expense-tracker">
+<meta property="og:title" content="Expense Tracker App — Receipt Scanner & CSV Export | TripTrackAI">
+<meta property="og:description" content="Scan receipts, track expenses automatically, export to CSV. The best expense tracker for business travelers.">
+<meta property="og:image" content="https://triptrackai.com/img/receipts-page.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Expense Tracker App — Receipt Scanner & CSV Export | TripTrackAI">
+<meta name="twitter:description" content="Scan receipts, track expenses automatically, export to CSV. The best expense tracker for business travelers.">
+<meta name="twitter:image" content="https://triptrackai.com/img/receipts-page.jpg">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GF834EEVCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GF834EEVCX');
+</script>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "TripTrackAI Expense Tracker",
+  "description": "Expense tracker app with receipt scanner, OCR, and CSV export for business travelers.",
+  "url": "https://triptrackai.com/expense-tracker",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://triptrackai.com"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Expense Tracker",
+      "item": "https://triptrackai.com/expense-tracker"
+    }]
+  }
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best expense tracker app for business travel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TripTrackAI is the best expense tracker app for business travelers. It combines receipt scanning with OCR, automatic Gmail import, trip-based organization, and one-tap CSV export. Unlike standalone expense apps, TripTrackAI also handles trip organization and flight tracking in one app."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does receipt scanning with OCR work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Take a photo of any receipt with your phone camera. TripTrackAI's AI-powered OCR automatically extracts the merchant name, amount, date, and category. The expense is saved to your trip automatically. No manual typing required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I export expenses to CSV for my finance team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. TripTrackAI Pro allows unlimited CSV and PDF exports. All expenses include merchant name, amount, date, category, and trip association. Perfect for submitting expense reports to finance teams or importing into accounting software."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does TripTrackAI automatically import digital receipts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Connect your Gmail account and TripTrackAI automatically finds receipts from Uber, Lyft, hotels, restaurants, and other services. Digital receipts are imported and categorized automatically without manual entry."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="styles.css">
+<style>
+.expense-page{max-width:1200px;margin:0 auto;padding:120px 24px 80px}
+.expense-hero{text-align:center;margin-bottom:80px}
+.expense-hero h1{font-size:clamp(36px,6vw,60px);font-weight:900;margin-bottom:24px;line-height:1.05}
+.expense-hero .subtitle{font-size:clamp(18px,2.5vw,24px);color:var(--text-2);max-width:800px;margin:0 auto 40px;line-height:1.6}
+.section{margin-bottom:100px}
+.section-title{font-size:clamp(32px,5vw,44px);font-weight:900;margin-bottom:16px;text-align:center}
+.section-subtitle{font-size:18px;color:var(--text-2);text-align:center;max-width:700px;margin:0 auto 60px;line-height:1.7}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px}
+.feature-box{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px;transition:all 0.3s}
+.feature-box:hover{border-color:rgba(96,165,250,0.4);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.3)}
+.feature-icon{width:56px;height:56px;background:rgba(96,165,250,0.12);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px}
+.feature-box h3{font-size:22px;font-weight:700;margin-bottom:12px}
+.feature-box p{font-size:16px;color:var(--text-2);line-height:1.7}
+.cta-box{text-align:center;padding:60px 32px;background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(139,92,246,0.08));border-radius:24px;margin-top:80px}
+.cta-box h2{font-size:clamp(28px,4vw,40px);font-weight:900;margin-bottom:16px}
+.cta-box p{font-size:18px;color:var(--text-2);margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;padding:18px 40px;background:#fff;color:#000;border-radius:14px;font-size:17px;font-weight:700;transition:all 0.3s;text-decoration:none}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 16px 48px rgba(255,255,255,0.25)}
+</style>
+</head>
+<body>
+
+<nav class="nav scrolled">
+<div class="wrap nav-inner">
+<a href="/" class="logo">
+<img src="img/icon.png" alt="TripTrackAI" class="logo-icon">
+TripTrackAI
+</a>
+<div class="nav-right">
+<a href="/#how" class="nav-link">How It Works</a>
+<a href="/features" class="nav-link">Features</a>
+<a href="/business" class="nav-link">Business</a>
+<a href="/#pricing" class="nav-link">Pricing</a>
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="nav-btn">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+Get the App
+</a>
+</div>
+</div>
+</nav>
+
+<main class="expense-page">
+<div class="expense-hero">
+<h1>The Best Expense Tracker App<br>with Receipt Scanner</h1>
+<p class="subtitle">Track travel expenses automatically with TripTrackAI. Scan receipts with OCR, categorize expenses by trip, export to CSV for reimbursement. Stop wasting time on expense reports.</p>
+</div>
+
+<div class="section">
+<h2 class="section-title">Automatic Expense Tracking Features</h2>
+<p class="section-subtitle">Everything you need to track expenses and get reimbursed faster</p>
+<div class="features-grid">
+<div class="feature-box">
+<div class="feature-icon">📸</div>
+<h3>Receipt Scanner with OCR</h3>
+<p>Snap a photo of any receipt. AI-powered OCR extracts merchant name, amount, date, and category automatically. No manual typing required.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">📊</div>
+<h3>CSV & PDF Export</h3>
+<p>Export all expenses to CSV or PDF in one tap. Perfect for expense reports and reimbursement. Includes all details your finance team needs.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">📨</div>
+<h3>Gmail Receipt Import</h3>
+<p>Connect Gmail and TripTrackAI automatically finds receipts from Uber, Lyft, hotels, and restaurants. Digital receipts imported automatically.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">🏷️</div>
+<h3>Smart Categorization</h3>
+<p>Expenses automatically categorized as meals, transportation, lodging, or other. Edit categories anytime. Organize by trip for easy reporting.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">✈️</div>
+<h3>Trip-Based Organization</h3>
+<p>All expenses organized by trip automatically. See total spending per trip. Export expenses for specific trips only.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">💰</div>
+<h3>Multi-Currency Support</h3>
+<p>Track expenses in any currency. Automatic currency conversion. Perfect for international business travel.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">How Expense Tracking Works</h2>
+<p class="section-subtitle">From receipt to reimbursement in 3 simple steps</p>
+<div class="features-grid">
+<div class="feature-box">
+<div class="feature-icon" style="background:rgba(34,197,94,0.12)">1</div>
+<h3>Scan or Import Receipts</h3>
+<p>Take photos of paper receipts with your camera. AI extracts all details automatically. Or connect Gmail to import digital receipts from Uber, Lyft, hotels, and restaurants. Everything categorized by trip.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon" style="background:rgba(59,130,246,0.12)">2</div>
+<h3>Review & Organize</h3>
+<p>All expenses organized by trip automatically. Review categories, edit details if needed, and see total spending per trip. Everything ready for your expense report.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon" style="background:rgba(168,85,247,0.12)">3</div>
+<h3>Export & Submit</h3>
+<p>Tap export to get CSV or PDF with all expenses. Includes merchant, amount, date, category, and trip. Submit to finance team or import into accounting software. Get reimbursed faster.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">Frequently Asked Questions</h2>
+<div class="features-grid" style="grid-template-columns:1fr">
+<div class="feature-box">
+<h3>What is the best expense tracker app for business travel?</h3>
+<p>TripTrackAI is the best expense tracker app for business travelers. It combines receipt scanning with OCR, automatic Gmail import, trip-based organization, and one-tap CSV export. Unlike standalone expense apps like Expensify or Concur, TripTrackAI also handles trip organization and flight tracking in one app, making it the complete solution for business travel.</p>
+</div>
+<div class="feature-box">
+<h3>How does receipt scanning with OCR work?</h3>
+<p>Take a photo of any receipt with your phone camera. TripTrackAI's AI-powered OCR automatically extracts the merchant name, amount, date, and category. The expense is saved to your trip automatically. No manual typing required. The OCR works with receipts in any language and handles crumpled or faded receipts.</p>
+</div>
+<div class="feature-box">
+<h3>Can I export expenses to CSV for my finance team?</h3>
+<p>Yes. TripTrackAI Pro allows unlimited CSV and PDF exports. All expenses include merchant name, amount, date, category, and trip association. Perfect for submitting expense reports to finance teams or importing into accounting software like QuickBooks, Expensify, or SAP Concur. Export all expenses or filter by specific trips.</p>
+</div>
+<div class="feature-box">
+<h3>Does TripTrackAI automatically import digital receipts?</h3>
+<p>Yes. Connect your Gmail account and TripTrackAI automatically finds receipts from Uber, Lyft, hotels, restaurants, and other services. Digital receipts are imported and categorized automatically without manual entry. The app scans your email continuously and adds new receipts as they arrive.</p>
+</div>
+<div class="feature-box">
+<h3>How are expenses categorized?</h3>
+<p>TripTrackAI automatically categorizes expenses as meals, transportation, lodging, or other based on the merchant name. You can edit categories anytime. All expenses are also organized by trip, making it easy to see total spending per business trip and export trip-specific expense reports.</p>
+</div>
+<div class="feature-box">
+<h3>Can I track expenses in multiple currencies?</h3>
+<p>Yes. TripTrackAI supports all major currencies and automatically converts amounts to your home currency for reporting. Perfect for international business travel. The app detects currency from receipts and applies current exchange rates for accurate expense tracking.</p>
+</div>
+</div>
+</div>
+
+<div class="cta-box">
+<h2>Start Tracking Expenses Automatically</h2>
+<p>Join 5,000+ business travelers using TripTrackAI to track expenses and get reimbursed faster.</p>
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="cta-btn">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+Download TripTrackAI
+</a>
+<p style="margin-top:24px;font-size:14px;color:var(--text-3)">Free plan available • Pro: $11.99/month or $99.99/year</p>
+</div>
+</main>
+
+<footer class="foot">
+<div class="wrap foot-inner">
+<div class="foot-left">
+<div class="logo" style="font-size:18px">
+<img src="img/icon.png" alt="TripTrackAI" class="logo-icon" style="width:28px;height:28px">
+TripTrackAI
+</div>
+<p class="foot-sub">AI-powered travel organization.</p>
+</div>
+<div class="foot-right">
+<a href="/features">Features</a>
+<a href="/business">Business</a>
+<a href="/flight-tracker">Flight Tracker</a>
+<a href="/support">Support</a>
+<a href="/privacy">Privacy</a>
+<a href="/terms">Terms</a>
+</div>
+</div>
+<div class="wrap"><p class="foot-copy mono">&copy; 2026 TripTrackAI. All rights reserved.</p></div>
+</footer>
+
+</body>
+</html>

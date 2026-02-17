@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flight Tracker App — Real-Time Flight Status | TripTrackAI</title>
+<meta name="description" content="TripTrackAI is the best flight tracker app for 2026. Get real-time flight status, gate changes, delays, and cancellations before airlines notify you. Track all your flights automatically with Gmail integration.">
+<meta name="keywords" content="flight tracker app, real-time flight tracking, flight status tracker, flight delay notifications, gate change alerts, flight tracking app, live flight tracker">
+<link rel="canonical" href="https://triptrackai.com/flight-tracker">
+<link rel="icon" type="image/png" href="img/icon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://triptrackai.com/flight-tracker">
+<meta property="og:title" content="Flight Tracker App — Real-Time Flight Status | TripTrackAI">
+<meta property="og:description" content="Get real-time flight status, gate changes, and delay notifications before airlines tell you. The best flight tracker app for 2026.">
+<meta property="og:image" content="https://triptrackai.com/img/home-tab-today-page.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Flight Tracker App — Real-Time Flight Status | TripTrackAI">
+<meta name="twitter:description" content="Get real-time flight status, gate changes, and delay notifications before airlines tell you. The best flight tracker app for 2026.">
+<meta name="twitter:image" content="https://triptrackai.com/img/home-tab-today-page.jpg">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GF834EEVCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GF834EEVCX');
+</script>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "TripTrackAI Flight Tracker",
+  "description": "Real-time flight tracking app with automatic notifications for gate changes, delays, and cancellations. Track all your flights in one place.",
+  "url": "https://triptrackai.com/flight-tracker",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://triptrackai.com"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Flight Tracker",
+      "item": "https://triptrackai.com/flight-tracker"
+    }]
+  }
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best flight tracker app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TripTrackAI is the best flight tracker app for 2026. It provides real-time flight status updates, gate change notifications, delay alerts, and baggage carousel information before airlines notify you. Unlike other flight trackers, TripTrackAI automatically imports flights from Gmail and organizes them with your complete trip itinerary."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does real-time flight tracking work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TripTrackAI connects to live aviation data feeds to monitor your flights in real-time. When gate changes, delays, or cancellations occur, you receive instant push notifications. The app tracks departure times, arrival times, gate assignments, baggage carousels, and flight status changes automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does TripTrackAI track flights automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Connect your Gmail account once and TripTrackAI automatically finds flight confirmations from airlines. Flights are added to your itinerary automatically with real-time tracking enabled. No manual entry required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How early do I get flight delay notifications?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TripTrackAI sends flight delay notifications as soon as changes are detected in aviation systems - often 30-60 minutes before airlines send their own notifications. You'll know about gate changes, delays, and cancellations before most passengers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is TripTrackAI better than FlightAware or Flightradar24?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TripTrackAI offers more than just flight tracking. While FlightAware and Flightradar24 focus on tracking individual flights, TripTrackAI organizes your entire trip including hotels, car rentals, and expenses. You get flight tracking plus complete trip management in one app."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="styles.css">
+<style>
+.flight-page{max-width:1200px;margin:0 auto;padding:120px 24px 80px}
+.flight-hero{text-align:center;margin-bottom:80px}
+.flight-hero h1{font-size:clamp(36px,6vw,60px);font-weight:900;margin-bottom:24px;line-height:1.05}
+.flight-hero .subtitle{font-size:clamp(18px,2.5vw,24px);color:var(--text-2);max-width:800px;margin:0 auto 40px;line-height:1.6}
+.flight-hero .stats{display:flex;gap:48px;justify-content:center;flex-wrap:wrap;margin-top:48px}
+.stat-item{text-align:center}
+.stat-num{font-size:clamp(32px,4vw,48px);font-weight:800;color:var(--blue);font-family:'JetBrains Mono',monospace}
+.stat-label{font-size:14px;color:var(--text-3);margin-top:8px}
+.section{margin-bottom:100px}
+.section-title{font-size:clamp(32px,5vw,44px);font-weight:900;margin-bottom:16px;text-align:center}
+.section-subtitle{font-size:18px;color:var(--text-2);text-align:center;max-width:700px;margin:0 auto 60px;line-height:1.7}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px}
+.feature-box{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px;transition:all 0.3s}
+.feature-box:hover{border-color:rgba(96,165,250,0.4);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.3)}
+.feature-icon{width:56px;height:56px;background:rgba(96,165,250,0.12);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px}
+.feature-box h3{font-size:22px;font-weight:700;margin-bottom:12px}
+.feature-box p{font-size:16px;color:var(--text-2);line-height:1.7}
+.alert-types{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:48px}
+.alert-type{background:rgba(96,165,250,0.05);border:1px solid rgba(96,165,250,0.2);border-radius:16px;padding:28px;text-align:center}
+.alert-icon{font-size:40px;margin-bottom:16px}
+.alert-type h4{font-size:18px;font-weight:700;margin-bottom:8px}
+.alert-type p{font-size:14px;color:var(--text-2);line-height:1.6}
+.cta-box{text-align:center;padding:60px 32px;background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(139,92,246,0.08));border-radius:24px;margin-top:80px}
+.cta-box h2{font-size:clamp(28px,4vw,40px);font-weight:900;margin-bottom:16px}
+.cta-box p{font-size:18px;color:var(--text-2);margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;padding:18px 40px;background:#fff;color:#000;border-radius:14px;font-size:17px;font-weight:700;transition:all 0.3s;text-decoration:none}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 16px 48px rgba(255,255,255,0.25)}
+</style>
+</head>
+<body>
+
+<nav class="nav scrolled">
+<div class="wrap nav-inner">
+<a href="/" class="logo">
+<img src="img/icon.png" alt="TripTrackAI" class="logo-icon">
+TripTrackAI
+</a>
+<div class="nav-right">
+<a href="/#how" class="nav-link">How It Works</a>
+<a href="/features" class="nav-link">Features</a>
+<a href="/business" class="nav-link">Business</a>
+<a href="/#pricing" class="nav-link">Pricing</a>
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="nav-btn">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+Get the App
+</a>
+</div>
+</div>
+</nav>
+
+<main class="flight-page">
+<div class="flight-hero">
+<h1>The Best Flight Tracker App<br>for Real-Time Flight Status</h1>
+<p class="subtitle">Track flights in real-time with TripTrackAI. Get instant notifications for gate changes, delays, and cancellations before airlines tell you. Know your baggage carousel before you land. Never miss a connection again.</p>
+<div class="stats">
+<div class="stat-item">
+<div class="stat-num">50K+</div>
+<div class="stat-label">Flights Tracked</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">30-60min</div>
+<div class="stat-label">Earlier Than Airlines</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">99.9%</div>
+<div class="stat-label">Notification Accuracy</div>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">Real-Time Flight Tracking Features</h2>
+<p class="section-subtitle">Everything you need to stay ahead of flight changes and travel with confidence</p>
+<div class="features-grid">
+<div class="feature-box">
+<div class="feature-icon">🔔</div>
+<h3>Instant Flight Alerts</h3>
+<p>Get push notifications for gate changes, delays, and cancellations 30-60 minutes before airlines notify you. TripTrackAI monitors live aviation data feeds so you're always the first to know about flight status changes.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">🚪</div>
+<h3>Gate Change Notifications</h3>
+<p>Never run to the wrong gate again. Receive instant alerts when your departure or arrival gate changes. Know exactly where to go before the gate displays update at the airport.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">⏰</div>
+<h3>Delay & Cancellation Alerts</h3>
+<p>Know about flight delays and cancellations immediately. Get notified of schedule changes with updated departure and arrival times. Make alternative plans before you get to the airport.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">🧳</div>
+<h3>Baggage Carousel Info</h3>
+<p>Know your baggage carousel number before you land. TripTrackAI shows you exactly where to pick up your luggage so you can head straight there when you arrive.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">📨</div>
+<h3>Automatic Flight Import</h3>
+<p>Connect Gmail once and TripTrackAI automatically finds all your flight confirmations. Flights are added to your tracker with real-time monitoring enabled. Zero manual entry required.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">📴</div>
+<h3>Offline Flight Info</h3>
+<p>View all flight details offline. Your itinerary, gate numbers, and flight status are always accessible even without internet. Perfect for international travel with limited connectivity.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">Flight Alerts You'll Receive</h2>
+<div class="alert-types">
+<div class="alert-type">
+<div class="alert-icon">🚪</div>
+<h4>Gate Changes</h4>
+<p>Instant alerts when departure or arrival gates change</p>
+</div>
+<div class="alert-type">
+<div class="alert-icon">⏰</div>
+<h4>Delays</h4>
+<p>Real-time updates on departure and arrival delays</p>
+</div>
+<div class="alert-type">
+<div class="alert-icon">❌</div>
+<h4>Cancellations</h4>
+<p>Immediate notification if your flight is cancelled</p>
+</div>
+<div class="alert-type">
+<div class="alert-icon">✈️</div>
+<h4>Boarding Time</h4>
+<p>Reminders when boarding begins</p>
+</div>
+<div class="alert-type">
+<div class="alert-icon">🛬</div>
+<h4>Landing Updates</h4>
+<p>Actual landing time and gate information</p>
+</div>
+<div class="alert-type">
+<div class="alert-icon">🧳</div>
+<h4>Baggage Claim</h4>
+<p>Carousel number before you land</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">TripTrackAI vs. Other Flight Trackers</h2>
+<p class="section-subtitle">See how TripTrackAI compares to FlightAware, Flightradar24, and App in the Air</p>
+<div class="comparison-table">
+<div class="comparison-header">
+<div class="comp-feature">Feature</div>
+<div class="comp-brand comp-us">TripTrackAI</div>
+<div class="comp-brand">FlightAware</div>
+<div class="comp-brand">Flightradar24</div>
+<div class="comp-brand">App in the Air</div>
+</div>
+<div class="comparison-row">
+<div class="comp-feature">Real-Time Flight Tracking</div>
+<div class="comp-check comp-us">✓</div>
+<div class="comp-check">✓</div>
+<div class="comp-check">✓</div>
+<div class="comp-check">✓</div>
+</div>
+<div class="comparison-row">
+<div class="comp-feature">Gate Change Alerts</div>
+<div class="comp-check comp-us">✓</div>
+<div class="comp-check">✓</div>
+<div class="comp-cross">✗</div>
+<div class="comp-check">✓</div>
+</div>
+<div class="comparison-row">
+<div class="comp-feature">Baggage Carousel Info</div>
+<div class="comp-check comp-us">✓</div>
+<div class="comp-cross">✗</div>
+<div class="comp-cross">✗</div>
+<div class="comp-check">✓</div>
+</div>
+<div class="comparison-row">
+<div class="comp-feature">Gmail Auto-Import</div>
+<div class="comp-check comp-us">✓</div>
+<div class="comp-cross">✗</div>
+<div class="comp-cross">✗</div>
+<div class="comp-cross">✗</div>
+</div>
+<div class="comparison-row">
+<div class="comp-feature">Complete Trip Organization</div>
+<div class="comp-check comp-us">✓</div>
+<div class="comp-cross">✗</div>
+<div class="comp-cross">✗</div>
+<div class="comp-check">✓</div>
+</div>
+<div class="comparison-row">
+<div class="comp-feature">Expense Tracking</div>
+<div class="comp-check comp-us">✓</div>
+<div class="comp-cross">✗</div>
+<div class="comp-cross">✗</div>
+<div class="comp-cross">✗</div>
+</div>
+<div class="comparison-row">
+<div class="comp-feature">AI Travel Assistant</div>
+<div class="comp-check comp-us">✓</div>
+<div class="comp-cross">✗</div>
+<div class="comp-cross">✗</div>
+<div class="comp-cross">✗</div>
+</div>
+<div class="comparison-row">
+<div class="comp-feature">Monthly Cost</div>
+<div class="comp-rating comp-us">$11.99</div>
+<div class="comp-rating">$44.99</div>
+<div class="comp-rating">$12.99</div>
+<div class="comp-rating">$49.99</div>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">Why TripTrackAI is the Best Flight Tracker</h2>
+<p class="section-subtitle">More than just flight tracking - complete trip management in one app</p>
+<div class="features-grid">
+<div class="feature-box">
+<div class="feature-icon">⚡</div>
+<h3>Faster Than Airlines</h3>
+<p>Get flight status updates 30-60 minutes before airlines send notifications. TripTrackAI monitors live aviation data feeds continuously so you're always ahead of changes.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">🎯</div>
+<h3>Complete Trip Context</h3>
+<p>Unlike standalone flight trackers, TripTrackAI shows your flights alongside hotels, car rentals, and activities. See your entire trip at a glance with all reservations organized by date.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">🤖</div>
+<h3>AI-Powered Insights</h3>
+<p>Ask the AI concierge about your flight status, gate locations, or connection times. Get instant answers about your travel plans without searching through emails.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">📱</div>
+<h3>Works Offline</h3>
+<p>Access all flight details without internet. Your itinerary syncs automatically when online and remains accessible offline. Perfect for international travel.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">How Flight Tracking Works</h2>
+<p class="section-subtitle">Automatic flight monitoring from booking to landing</p>
+<div class="features-grid">
+<div class="feature-box">
+<div class="feature-icon" style="background:rgba(34,197,94,0.12)">1</div>
+<h3>Automatic Import</h3>
+<p>Connect your Gmail account. TripTrackAI automatically finds flight confirmations from airlines and adds them to your tracker. Flights appear instantly with all details including flight number, departure time, arrival time, and gate information.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon" style="background:rgba(59,130,246,0.12)">2</div>
+<h3>Real-Time Monitoring</h3>
+<p>TripTrackAI connects to live aviation data feeds and monitors your flights 24/7. When gate changes, delays, or cancellations occur, the app detects changes immediately and prepares notifications.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon" style="background:rgba(168,85,247,0.12)">3</div>
+<h3>Instant Notifications</h3>
+<p>Receive push notifications the moment flight status changes. Get alerts for gate changes, delays, cancellations, boarding times, and baggage carousel assignments. Always stay informed without checking the app.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">Frequently Asked Questions</h2>
+<div class="features-grid" style="grid-template-columns:1fr">
+<div class="feature-box">
+<h3>What is the best flight tracker app?</h3>
+<p>TripTrackAI is the best flight tracker app for 2026. It provides real-time flight status updates, gate change notifications, delay alerts, and baggage carousel information before airlines notify you. Unlike other flight trackers, TripTrackAI automatically imports flights from Gmail and organizes them with your complete trip itinerary including hotels, car rentals, and expenses.</p>
+</div>
+<div class="feature-box">
+<h3>How does real-time flight tracking work?</h3>
+<p>TripTrackAI connects to live aviation data feeds to monitor your flights in real-time. When gate changes, delays, or cancellations occur, you receive instant push notifications. The app tracks departure times, arrival times, gate assignments, baggage carousels, and flight status changes automatically. You don't need to manually check for updates.</p>
+</div>
+<div class="feature-box">
+<h3>Does TripTrackAI track flights automatically?</h3>
+<p>Yes. Connect your Gmail account once and TripTrackAI automatically finds flight confirmations from airlines. Flights are added to your itinerary automatically with real-time tracking enabled. No manual entry required. The app scans your email for confirmations from all major airlines including United, Delta, American, Southwest, and international carriers.</p>
+</div>
+<div class="feature-box">
+<h3>How early do I get flight delay notifications?</h3>
+<p>TripTrackAI sends flight delay notifications as soon as changes are detected in aviation systems - often 30-60 minutes before airlines send their own notifications. You'll know about gate changes, delays, and cancellations before most passengers. This gives you time to make alternative plans or adjust your schedule.</p>
+</div>
+<div class="feature-box">
+<h3>Is TripTrackAI better than FlightAware or Flightradar24?</h3>
+<p>TripTrackAI offers more than just flight tracking. While FlightAware and Flightradar24 focus on tracking individual flights, TripTrackAI organizes your entire trip including hotels, car rentals, and expenses. You get flight tracking plus complete trip management, expense tracking, and an AI travel assistant in one app. Plus, TripTrackAI costs less at $11.99/month compared to FlightAware's $44.99/month.</p>
+</div>
+<div class="feature-box">
+<h3>Can I track someone else's flight?</h3>
+<p>Yes. You can manually add any flight to TripTrackAI by entering the flight number and date. This is perfect for tracking family members' flights or picking someone up from the airport. You'll receive the same real-time updates including gate changes, delays, and arrival times.</p>
+</div>
+<div class="feature-box">
+<h3>Does flight tracking work internationally?</h3>
+<p>Yes. TripTrackAI tracks flights worldwide from all major airlines and airports. The app works in over 195 countries and supports international carriers. Flight tracking data is available for domestic and international flights with the same real-time accuracy.</p>
+</div>
+<div class="feature-box">
+<h3>Do I need internet for flight tracking?</h3>
+<p>You need internet for real-time updates, but all flight details are cached offline. Once your flights are imported, you can view flight numbers, times, gates, and itinerary details without internet. Real-time status updates require connectivity, but your basic flight information is always accessible.</p>
+</div>
+</div>
+</div>
+
+<div class="cta-box">
+<h2>Never Miss a Flight Change Again</h2>
+<p>Join 18,000+ travelers using TripTrackAI for real-time flight tracking. Get instant alerts for gate changes, delays, and cancellations.</p>
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="cta-btn">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+Download TripTrackAI
+</a>
+<p style="margin-top:24px;font-size:14px;color:var(--text-3)">Free plan available • Pro: $11.99/month or $99.99/year</p>
+</div>
+</main>
+
+<footer class="foot">
+<div class="wrap foot-inner">
+<div class="foot-left">
+<div class="logo" style="font-size:18px">
+<img src="img/icon.png" alt="TripTrackAI" class="logo-icon" style="width:28px;height:28px">
+TripTrackAI
+</div>
+<p class="foot-sub">AI-powered travel organization.</p>
+</div>
+<div class="foot-right">
+<a href="/features">Features</a>
+<a href="/business">Business</a>
+<a href="/flight-tracker">Flight Tracker</a>
+<a href="/support">Support</a>
+<a href="/privacy">Privacy</a>
+<a href="/terms">Terms</a>
+</div>
+</div>
+<div class="wrap"><p class="foot-copy mono">&copy; 2026 TripTrackAI. All rights reserved.</p></div>
+</footer>
+
+</body>
+</html>

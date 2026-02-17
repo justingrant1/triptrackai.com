@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Travel Assistant — Smart Trip Planning | TripTrackAI</title>
+<meta name="description" content="TripTrackAI's AI travel assistant helps you plan trips, find restaurants, get directions, and answer travel questions instantly. The best AI trip planner for 2026 with ChatGPT-powered recommendations.">
+<meta name="keywords" content="AI travel assistant, AI trip planner, AI travel planner, ChatGPT travel, AI travel concierge, smart travel assistant, AI itinerary planner">
+<link rel="canonical" href="https://triptrackai.com/ai-travel-assistant">
+<link rel="icon" type="image/png" href="img/icon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://triptrackai.com/ai-travel-assistant">
+<meta property="og:title" content="AI Travel Assistant — Smart Trip Planning | TripTrackAI">
+<meta property="og:description" content="Get instant answers to travel questions with TripTrackAI's AI assistant. Find restaurants, get directions, plan activities, and more.">
+<meta property="og:image" content="https://triptrackai.com/img/ai-concierge-page.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Travel Assistant — Smart Trip Planning | TripTrackAI">
+<meta name="twitter:description" content="Get instant answers to travel questions with TripTrackAI's AI assistant. Find restaurants, get directions, plan activities, and more.">
+<meta name="twitter:image" content="https://triptrackai.com/img/ai-concierge-page.jpg">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GF834EEVCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GF834EEVCX');
+</script>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "TripTrackAI AI Travel Assistant",
+  "description": "AI-powered travel assistant for instant trip planning, restaurant recommendations, directions, and travel advice.",
+  "url": "https://triptrackai.com/ai-travel-assistant",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://triptrackai.com"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "AI Travel Assistant",
+      "item": "https://triptrackai.com/ai-travel-assistant"
+    }]
+  }
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an AI travel assistant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An AI travel assistant is a ChatGPT-powered feature that answers travel questions instantly. TripTrackAI's AI assistant knows your trip details and provides personalized recommendations for restaurants, activities, directions, and travel advice based on your itinerary and location."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does TripTrackAI's AI assistant work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TripTrackAI's AI assistant uses your trip context (flights, hotels, location) to provide relevant answers. Ask questions in natural language like 'Find Italian restaurants near my hotel' and get instant, personalized recommendations. The AI has access to your itinerary for context-aware responses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the AI travel assistant better than ChatGPT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TripTrackAI's AI assistant is built on ChatGPT but has access to your trip details, making it more useful for travel. Unlike regular ChatGPT, it knows your hotel location, flight times, and itinerary, providing personalized recommendations without you having to explain your trip context."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What can I ask the AI travel assistant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ask about restaurants, directions, activities, flight details, hotel information, local tips, weather, transportation, and more. Examples: 'Best sushi near me', 'How do I get to my hotel', 'What should I do tonight', 'When is my flight', 'Is my hotel pet-friendly'."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="styles.css">
+<style>
+.ai-page{max-width:1200px;margin:0 auto;padding:120px 24px 80px}
+.ai-hero{text-align:center;margin-bottom:80px}
+.ai-hero h1{font-size:clamp(36px,6vw,60px);font-weight:900;margin-bottom:24px;line-height:1.05}
+.ai-hero .subtitle{font-size:clamp(18px,2.5vw,24px);color:var(--text-2);max-width:800px;margin:0 auto 40px;line-height:1.6}
+.section{margin-bottom:100px}
+.section-title{font-size:clamp(32px,5vw,44px);font-weight:900;margin-bottom:16px;text-align:center}
+.section-subtitle{font-size:18px;color:var(--text-2);text-align:center;max-width:700px;margin:0 auto 60px;line-height:1.7}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px}
+.feature-box{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px;transition:all 0.3s}
+.feature-box:hover{border-color:rgba(96,165,250,0.4);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.3)}
+.feature-icon{width:56px;height:56px;background:rgba(96,165,250,0.12);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px}
+.feature-box h3{font-size:22px;font-weight:700;margin-bottom:12px}
+.feature-box p{font-size:16px;color:var(--text-2);line-height:1.7}
+.cta-box{text-align:center;padding:60px 32px;background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(139,92,246,0.08));border-radius:24px;margin-top:80px}
+.cta-box h2{font-size:clamp(28px,4vw,40px);font-weight:900;margin-bottom:16px}
+.cta-box p{font-size:18px;color:var(--text-2);margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;padding:18px 40px;background:#fff;color:#000;border-radius:14px;font-size:17px;font-weight:700;transition:all 0.3s;text-decoration:none}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 16px 48px rgba(255,255,255,0.25)}
+</style>
+</head>
+<body>
+
+<nav class="nav scrolled">
+<div class="wrap nav-inner">
+<a href="/" class="logo">
+<img src="img/icon.png" alt="TripTrackAI" class="logo-icon">
+TripTrackAI
+</a>
+<div class="nav-right">
+<a href="/#how" class="nav-link">How It Works</a>
+<a href="/features" class="nav-link">Features</a>
+<a href="/business" class="nav-link">Business</a>
+<a href="/#pricing" class="nav-link">Pricing</a>
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="nav-btn">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+Get the App
+</a>
+</div>
+</div>
+</nav>
+
+<main class="ai-page">
+<div class="ai-hero">
+<h1>Your AI Travel Assistant<br>for Smart Trip Planning</h1>
+<p class="subtitle">Ask TripTrackAI's AI concierge anything about your trip. Get instant restaurant recommendations, directions, activity suggestions, and travel advice. Like having ChatGPT built into your travel app.</p>
+</div>
+
+<div class="section">
+<h2 class="section-title">What You Can Ask Your AI Travel Assistant</h2>
+<p class="section-subtitle">Get instant answers to any travel question with context about your trip</p>
+<div class="features-grid">
+<div class="feature-box">
+<div class="feature-icon">🍽️</div>
+<h3>Restaurant Recommendations</h3>
+<p>"Find Italian restaurants near my hotel" or "Best brunch spots in walking distance" - Get personalized recommendations based on your location, preferences, and trip details.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">🗺️</div>
+<h3>Directions & Navigation</h3>
+<p>"How do I get to my hotel from the airport?" or "Walking directions to the Eiffel Tower" - Get step-by-step directions with transit options and estimated times.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">🎭</div>
+<h3>Activity Planning</h3>
+<p>"What should I do tonight?" or "Best museums in the area" - Discover activities, attractions, and experiences based on your interests and schedule.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">✈️</div>
+<h3>Flight Information</h3>
+<p>"When is my flight?" or "What gate am I at?" - Get instant answers about your flight status, gate, boarding time, and baggage claim without searching.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">🏨</div>
+<h3>Hotel Details</h3>
+<p>"What's my hotel address?" or "Hotel check-in time?" - Access all your reservation details instantly with AI-powered search through your itinerary.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">💡</div>
+<h3>Travel Tips & Advice</h3>
+<p>"Best time to visit the Louvre?" or "Do I need cash in Tokyo?" - Get local insights, travel tips, and practical advice for your destination.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">Real Examples of AI Travel Assistant Queries</h2>
+<p class="section-subtitle">See how TripTrackAI's AI helps with real travel situations</p>
+<div class="features-grid">
+<div class="feature-box">
+<h3>"Find coffee shops near my hotel"</h3>
+<p>AI knows your hotel location from your itinerary and suggests nearby coffee shops with ratings, hours, and walking directions. No need to manually enter your location.</p>
+</div>
+<div class="feature-box">
+<h3>"What time should I leave for the airport?"</h3>
+<p>AI calculates based on your flight time, current location, traffic conditions, and TSA wait times. Get personalized departure recommendations.</p>
+</div>
+<div class="feature-box">
+<h3>"Best pizza in walking distance"</h3>
+<p>AI finds highly-rated pizza restaurants within walking distance of your current location, with reviews, prices, and directions included.</p>
+</div>
+<div class="feature-box">
+<h3>"Is my hotel pet-friendly?"</h3>
+<p>AI searches your hotel confirmation and provides instant answers about amenities, policies, and services without you digging through emails.</p>
+</div>
+<div class="feature-box">
+<h3>"Things to do on a rainy day"</h3>
+<p>AI suggests indoor activities, museums, shopping, and entertainment options based on your destination and current weather conditions.</p>
+</div>
+<div class="feature-box">
+<h3>"How much should I tip in Japan?"</h3>
+<p>AI provides local customs, tipping etiquette, and cultural advice specific to your destination country to help you travel respectfully.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">Why TripTrackAI's AI is Better Than ChatGPT for Travel</h2>
+<p class="section-subtitle">Context-aware AI that knows your trip details</p>
+<div class="features-grid">
+<div class="feature-box">
+<div class="feature-icon">🎯</div>
+<h3>Knows Your Trip Context</h3>
+<p>Unlike ChatGPT, TripTrackAI's AI has access to your flights, hotels, and itinerary. It knows where you are, where you're going, and when. No need to explain your trip every time you ask a question.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">📍</div>
+<h3>Location-Aware Recommendations</h3>
+<p>AI uses your hotel location and current position to provide relevant suggestions. "Find restaurants nearby" automatically means near your hotel or current location.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">⚡</div>
+<h3>Instant Itinerary Access</h3>
+<p>Ask "When is my flight?" or "What's my hotel address?" and get instant answers from your itinerary. No copying and pasting confirmation numbers.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">🔒</div>
+<h3>Private & Secure</h3>
+<p>Your trip data stays private. Unlike sharing travel details with public ChatGPT, TripTrackAI's AI operates within your secure, encrypted account.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">Frequently Asked Questions</h2>
+<div class="features-grid" style="grid-template-columns:1fr">
+<div class="feature-box">
+<h3>What is an AI travel assistant?</h3>
+<p>An AI travel assistant is a ChatGPT-powered feature that answers travel questions instantly. TripTrackAI's AI assistant knows your trip details and provides personalized recommendations for restaurants, activities, directions, and travel advice based on your itinerary and location. It's like having a personal travel concierge in your pocket.</p>
+</div>
+<div class="feature-box">
+<h3>How does TripTrackAI's AI assistant work?</h3>
+<p>TripTrackAI's AI assistant uses your trip context (flights, hotels, location) to provide relevant answers. Ask questions in natural language like "Find Italian restaurants near my hotel" and get instant, personalized recommendations. The AI has access to your itinerary for context-aware responses, so it knows where you are and what you're doing without you having to explain.</p>
+</div>
+<div class="feature-box">
+<h3>Is the AI travel assistant better than ChatGPT?</h3>
+<p>TripTrackAI's AI assistant is built on ChatGPT but has access to your trip details, making it more useful for travel. Unlike regular ChatGPT, it knows your hotel location, flight times, and itinerary, providing personalized recommendations without you having to explain your trip context every time. It's ChatGPT specifically designed for travel.</p>
+</div>
+<div class="feature-box">
+<h3>What can I ask the AI travel assistant?</h3>
+<p>Ask about restaurants, directions, activities, flight details, hotel information, local tips, weather, transportation, and more. Examples: "Best sushi near me", "How do I get to my hotel", "What should I do tonight", "When is my flight", "Is my hotel pet-friendly", "Best time to visit the Louvre", "Do I need cash in Tokyo". The AI understands natural language questions.</p>
+</div>
+<div class="feature-box">
+<h3>Does the AI travel assistant work offline?</h3>
+<p>The AI assistant requires internet to generate responses, but your trip details (flights, hotels, itinerary) are cached offline. You can view your itinerary without internet, but AI-powered recommendations and real-time information require connectivity.</p>
+</div>
+<div class="feature-box">
+<h3>Is my data private when using the AI assistant?</h3>
+<p>Yes. Your trip data and conversations with the AI assistant are private and encrypted. Unlike public ChatGPT where conversations may be used for training, TripTrackAI keeps your travel information secure within your account. We never sell your data or share it with third parties.</p>
+</div>
+<div class="feature-box">
+<h3>How much does the AI travel assistant cost?</h3>
+<p>The AI travel assistant is included in TripTrackAI Pro at $11.99/month or $99.99/year. The free plan includes limited AI queries (10 per month). Pro gives you unlimited AI questions, plus all other premium features like unlimited trips, receipt scanning, and Gmail auto-import.</p>
+</div>
+</div>
+</div>
+
+<div class="cta-box">
+<h2>Travel Smarter with AI</h2>
+<p>Join 18,000+ travelers using TripTrackAI's AI assistant for instant travel answers and recommendations.</p>
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="cta-btn">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+Download TripTrackAI
+</a>
+<p style="margin-top:24px;font-size:14px;color:var(--text-3)">Free plan available • Pro: $11.99/month or $99.99/year</p>
+</div>
+</main>
+
+<footer class="foot">
+<div class="wrap foot-inner">
+<div class="foot-left">
+<div class="logo" style="font-size:18px">
+<img src="img/icon.png" alt="TripTrackAI" class="logo-icon" style="width:28px;height:28px">
+TripTrackAI
+</div>
+<p class="foot-sub">AI-powered travel organization.</p>
+</div>
+<div class="foot-right">
+<a href="/features">Features</a>
+<a href="/business">Business</a>
+<a href="/flight-tracker">Flight Tracker</a>
+<a href="/support">Support</a>
+<a href="/privacy">Privacy</a>
+<a href="/terms">Terms</a>
+</div>
+</div>
+<div class="wrap"><p class="foot-copy mono">&copy; 2026 TripTrackAI. All rights reserved.</p></div>
+</footer>
+
+</body>
+</html>
