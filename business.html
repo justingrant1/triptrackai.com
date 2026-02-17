@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Travel App — TripTrackAI | Corporate Travel Management</title>
+<meta name="description" content="TripTrackAI is the best business travel app for 2026. Automatic expense tracking, receipt scanning, CSV exports, Gmail integration. Perfect for frequent business travelers, sales teams, and executives.">
+<meta name="keywords" content="business travel app, corporate travel management, business trip organizer, travel expense tracker, business travel expense app, corporate travel app">
+<link rel="canonical" href="https://triptrackai.com/business">
+<link rel="icon" type="image/png" href="img/icon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://triptrackai.com/business">
+<meta property="og:title" content="Business Travel App — TripTrackAI | Corporate Travel Management">
+<meta property="og:description" content="The best business travel app for expense tracking, receipt scanning, and trip organization. Perfect for frequent business travelers.">
+<meta property="og:image" content="https://triptrackai.com/img/receipts-page.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Business Travel App — TripTrackAI | Corporate Travel Management">
+<meta name="twitter:description" content="The best business travel app for expense tracking, receipt scanning, and trip organization. Perfect for frequent business travelers.">
+<meta name="twitter:image" content="https://triptrackai.com/img/receipts-page.jpg">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TNDTS15FS0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TNDTS15FS0');
+</script>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "TripTrackAI for Business Travel",
+  "description": "Business travel management app with automatic expense tracking, receipt scanning, and trip organization for corporate travelers.",
+  "url": "https://triptrackai.com/business",
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://triptrackai.com"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Business",
+      "item": "https://triptrackai.com/business"
+    }]
+  }
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What makes TripTrackAI the best business travel app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TripTrackAI combines automatic trip organization, real-time flight tracking, AI-powered receipt scanning, and one-tap CSV exports. Unlike competitors, we offer unlimited receipt scanning, Gmail auto-import, and offline access in our Pro plan at just $11.99/month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does TripTrackAI save time on expense reports?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TripTrackAI automatically scans receipts with OCR, extracts merchant names, amounts, dates, and categories. Gmail integration finds Uber, Lyft, and hotel receipts automatically. Export everything to CSV in one tap. Business travelers save an average of 90% of time on expense reporting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is TripTrackAI secure for corporate travel data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. TripTrackAI uses bank-level AES-256 encryption, OAuth 2.0 for Gmail connections, and is GDPR compliant. We never sell your data. All company travel information is encrypted at rest and in transit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I export expense reports for my finance team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. TripTrackAI Pro allows unlimited CSV and PDF exports. All receipts include merchant name, amount, date, category, and trip association. Perfect for submitting to finance teams or importing into accounting software."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does TripTrackAI cost for business travelers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "TripTrackAI offers a free plan with 3 trips and 10 receipts/month. Pro is $11.99/month or $99.99/year (save 30%) with unlimited trips, receipts, AI concierge, Gmail auto-import, and CSV exports. Team plans starting at $39.99/month coming soon."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="styles.css">
+<style>
+.business-page{max-width:1200px;margin:0 auto;padding:120px 24px 80px}
+.business-hero{text-align:center;margin-bottom:80px}
+.business-hero h1{font-size:clamp(36px,6vw,60px);font-weight:900;margin-bottom:24px;line-height:1.05}
+.business-hero .subtitle{font-size:clamp(18px,2.5vw,24px);color:var(--text-2);max-width:800px;margin:0 auto 40px;line-height:1.6}
+.business-hero .stats{display:flex;gap:48px;justify-content:center;flex-wrap:wrap;margin-top:48px}
+.stat-item{text-align:center}
+.stat-num{font-size:clamp(32px,4vw,48px);font-weight:800;color:var(--blue);font-family:'JetBrains Mono',monospace}
+.stat-label{font-size:14px;color:var(--text-3);margin-top:8px}
+.section{margin-bottom:100px}
+.section-title{font-size:clamp(32px,5vw,44px);font-weight:900;margin-bottom:16px;text-align:center}
+.section-subtitle{font-size:18px;color:var(--text-2);text-align:center;max-width:700px;margin:0 auto 60px;line-height:1.7}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px}
+.feature-box{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px;transition:all 0.3s}
+.feature-box:hover{border-color:rgba(96,165,250,0.4);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.3)}
+.feature-icon{width:56px;height:56px;background:rgba(96,165,250,0.12);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:20px}
+.feature-box h3{font-size:22px;font-weight:700;margin-bottom:12px}
+.feature-box p{font-size:16px;color:var(--text-2);line-height:1.7}
+.use-cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:48px}
+.use-case{background:rgba(96,165,250,0.05);border:1px solid rgba(96,165,250,0.2);border-radius:16px;padding:28px;text-align:center}
+.use-case-icon{font-size:40px;margin-bottom:16px}
+.use-case h4{font-size:18px;font-weight:700;margin-bottom:8px}
+.use-case p{font-size:14px;color:var(--text-2);line-height:1.6}
+.testimonial-box{background:linear-gradient(135deg,rgba(59,130,246,0.08),rgba(139,92,246,0.05));border:1px solid rgba(96,165,250,0.2);border-radius:20px;padding:40px;max-width:800px;margin:60px auto}
+.testimonial-text{font-size:20px;font-style:italic;color:var(--text);line-height:1.7;margin-bottom:24px}
+.testimonial-author{display:flex;align-items:center;gap:16px}
+.testimonial-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#60A5FA,#818CF8);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff}
+.testimonial-info strong{display:block;font-size:16px;margin-bottom:4px}
+.testimonial-info span{font-size:14px;color:var(--text-3)}
+.cta-box{text-align:center;padding:60px 32px;background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(139,92,246,0.08));border-radius:24px;margin-top:80px}
+.cta-box h2{font-size:clamp(28px,4vw,40px);font-weight:900;margin-bottom:16px}
+.cta-box p{font-size:18px;color:var(--text-2);margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;padding:18px 40px;background:#fff;color:#000;border-radius:14px;font-size:17px;font-weight:700;transition:all 0.3s;text-decoration:none}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 16px 48px rgba(255,255,255,0.25)}
+</style>
+</head>
+<body>
+
+<nav class="nav scrolled">
+<div class="wrap nav-inner">
+<a href="/" class="logo">
+<img src="img/icon.png" alt="TripTrackAI" class="logo-icon">
+TripTrackAI
+</a>
+<div class="nav-right">
+<a href="/#how" class="nav-link">How It Works</a>
+<a href="/features" class="nav-link">Features</a>
+<a href="/business" class="nav-link">Business</a>
+<a href="/#pricing" class="nav-link">Pricing</a>
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="nav-btn">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+Get the App
+</a>
+</div>
+</div>
+</nav>
+
+<main class="business-page">
+<div class="business-hero">
+<h1>The Best Business Travel App<br>for 2026</h1>
+<p class="subtitle">TripTrackAI is built for frequent business travelers. Automatic expense tracking, receipt scanning, CSV exports, and real-time flight alerts. Stop wasting time on expense reports.</p>
+<div class="stats">
+<div class="stat-item">
+<div class="stat-num">5,000+</div>
+<div class="stat-label">Business Travelers</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">90%</div>
+<div class="stat-label">Time Saved on Expenses</div>
+</div>
+<div class="stat-item">
+<div class="stat-num">$2.4M+</div>
+<div class="stat-label">Expenses Tracked</div>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">Built for Business Travelers</h2>
+<p class="section-subtitle">Everything you need to manage business trips efficiently. From automatic expense tracking to real-time flight alerts.</p>
+<div class="features-grid">
+<div class="feature-box">
+<div class="feature-icon">🧾</div>
+<h3>Automatic Expense Tracking</h3>
+<p>Scan receipts with your camera. AI extracts merchant, amount, date, and category instantly. Gmail auto-import finds Uber, Lyft, and hotel receipts automatically. No manual entry.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">📊</div>
+<h3>One-Tap CSV Export</h3>
+<p>Export all expenses to CSV or PDF in one tap. Perfect for expense reports and reimbursement. Includes merchant, amount, date, category, and trip details.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">📨</div>
+<h3>Gmail Auto-Import</h3>
+<p>Connect Gmail once. TripTrackAI automatically scans for flight, hotel, and car rental confirmations. Trips organize themselves. Zero manual work.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">✈️</div>
+<h3>Real-Time Flight Alerts</h3>
+<p>Get notified of gate changes, delays, and cancellations before the airline tells you. Know your baggage carousel before you land. Always stay ahead.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">📴</div>
+<h3>Offline Access</h3>
+<p>View all trips, reservations, and receipts without internet. Your itinerary is always available, even on flights or in areas with poor connectivity.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">🔒</div>
+<h3>Enterprise Security</h3>
+<p>Bank-level AES-256 encryption. OAuth 2.0 for Gmail. Your company data is protected. GDPR compliant. We never sell your data.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">Perfect For</h2>
+<div class="use-cases">
+<div class="use-case">
+<div class="use-case-icon">💼</div>
+<h4>Sales Teams</h4>
+<p>Track client visits, expenses, and travel schedules. Export reports for reimbursement.</p>
+</div>
+<div class="use-case">
+<div class="use-case-icon">👔</div>
+<h4>Executives</h4>
+<p>Manage multiple trips seamlessly. Real-time flight updates keep you on schedule.</p>
+</div>
+<div class="use-case">
+<div class="use-case-icon">🎯</div>
+<h4>Consultants</h4>
+<p>Organize client projects by trip. Track billable expenses automatically.</p>
+</div>
+<div class="use-case">
+<div class="use-case-icon">🌍</div>
+<h4>Frequent Flyers</h4>
+<p>Travel 10+ times per year? TripTrackAI saves hours on trip organization and expense tracking.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">What Business Travelers Say</h2>
+<div class="features-grid">
+<div class="testimonial-box" style="margin:0">
+<p class="testimonial-text">"TripTrackAI cut my expense report time from 2 hours to 10 minutes. The receipt scanning is incredible. I just snap photos and export to CSV. My finance team loves it."</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar">MR</div>
+<div class="testimonial-info">
+<strong>Michael Rodriguez</strong>
+<span>VP of Sales, SaaS Company</span>
+</div>
+</div>
+</div>
+<div class="testimonial-box" style="margin:0">
+<p class="testimonial-text">"I travel 3-4 times a month for client meetings. TripTrackAI keeps everything organized automatically. The real-time flight alerts have saved me from missing connections twice."</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar">JC</div>
+<div class="testimonial-info">
+<strong>Jennifer Chen</strong>
+<span>Management Consultant</span>
+</div>
+</div>
+</div>
+<div class="testimonial-box" style="margin:0">
+<p class="testimonial-text">"Our sales team uses TripTrackAI for all business travel. The Gmail integration means trips appear automatically. Expense tracking is seamless. Best $12/month we spend."</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar">DK</div>
+<div class="testimonial-info">
+<strong>David Kim</strong>
+<span>Sales Director, Tech Startup</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">TripTrackAI vs. Business Travel Tools</h2>
+<p class="section-subtitle">See how TripTrackAI compares to other corporate travel solutions</p>
+<div class="comparison-table">
+<div class="comparison-header">
+<div class="comp-feature">Feature</div>
+<div class="comp-brand comp-us">TripTrackAI</div>
+<div class="comp-brand">TripIt Pro</div>
+<div class="comp-brand">Expensify</div>
+<div class="comp-brand">SAP Concur</div>
+</div>
+<div class="comparison-row">
+<div class="comp-feature">Trip Organization</div>
+<div class="comp-check comp-us">✓</div>
+<div class="comp-check">✓</div>
+<div class="comp-cross">✗</div>
+<div class="comp-check">✓</div>
+</div>
+<div class="comparison-row">
+<div class="comp-feature">Receipt OCR Scanning</div>
+<div class="comp-check comp-us">✓</div>
+<div class="comp-cross">✗</div>
+<div class="comp-check">✓</div>
+<div class="comp-check">✓</div>
+</div>
+<div class="comparison-row">
+<div class="comp-feature">Real-Time Flight Tracking</div>
+<div class="comp-check comp-us">✓</div>
+<div class="comp-check">✓</div>
+<div class="comp-cross">✗</div>
+<div class="comp-cross">✗</div>
+</div>
+<div class="comparison-row">
+<div class="comp-feature">Gmail Auto-Import</div>
+<div class="comp-check comp-us">✓</div>
+<div class="comp-check">✓</div>
+<div class="comp-cross">✗</div>
+<div class="comp-cross">✗</div>
+</div>
+<div class="comparison-row">
+<div class="comp-feature">AI Travel Concierge</div>
+<div class="comp-check comp-us">✓</div>
+<div class="comp-cross">✗</div>
+<div class="comp-cross">✗</div>
+<div class="comp-cross">✗</div>
+</div>
+<div class="comparison-row">
+<div class="comp-feature">CSV/PDF Export</div>
+<div class="comp-check comp-us">✓</div>
+<div class="comp-check">✓</div>
+<div class="comp-check">✓</div>
+<div class="comp-check">✓</div>
+</div>
+<div class="comparison-row">
+<div class="comp-feature">Offline Access</div>
+<div class="comp-check comp-us">✓</div>
+<div class="comp-check">✓</div>
+<div class="comp-check">✓</div>
+<div class="comp-cross">✗</div>
+</div>
+<div class="comparison-row">
+<div class="comp-feature">Monthly Cost</div>
+<div class="comp-rating comp-us">$11.99</div>
+<div class="comp-rating">$49</div>
+<div class="comp-rating">$9+</div>
+<div class="comp-rating">Custom</div>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">Why Business Travelers Choose TripTrackAI</h2>
+<p class="section-subtitle">The most complete business travel app on the market.</p>
+<div class="features-grid">
+<div class="feature-box">
+<div class="feature-icon">⚡</div>
+<h3>Save 90% of Time</h3>
+<p>Stop manually entering expenses. Stop searching for confirmation emails. TripTrackAI automates everything.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">💰</div>
+<h3>Never Miss a Reimbursement</h3>
+<p>Track every expense automatically. Export complete reports. Get reimbursed faster.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">🎯</div>
+<h3>Stay Organized</h3>
+<p>All trips, reservations, and receipts in one place. Know what's next at a glance.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon">📱</div>
+<h3>Works Everywhere</h3>
+<p>iOS app with offline access. Works on flights, in taxis, anywhere. Your data syncs automatically.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">How It Works for Business</h2>
+<p class="section-subtitle">From booking to reimbursement in 3 simple steps</p>
+<div class="features-grid">
+<div class="feature-box">
+<div class="feature-icon" style="background:rgba(34,197,94,0.12)">1</div>
+<h3>Book Your Trip</h3>
+<p>Book flights, hotels, and car rentals as usual. Forward confirmation emails to TripTrackAI or connect Gmail for automatic import. Your trip appears instantly with all details organized.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon" style="background:rgba(59,130,246,0.12)">2</div>
+<h3>Track Expenses</h3>
+<p>Snap photos of receipts during your trip. AI extracts all details automatically. Gmail finds digital receipts from Uber, Lyft, hotels, and restaurants. Everything categorized by trip.</p>
+</div>
+<div class="feature-box">
+<div class="feature-icon" style="background:rgba(168,85,247,0.12)">3</div>
+<h3>Export & Submit</h3>
+<p>Tap export. Get a complete CSV or PDF with all expenses organized by trip. Submit to finance. Get reimbursed faster. No spreadsheets, no manual entry, no hassle.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<h2 class="section-title">Frequently Asked Questions</h2>
+<div class="features-grid" style="grid-template-columns:1fr">
+<div class="feature-box">
+<h3>What makes TripTrackAI the best business travel app?</h3>
+<p>TripTrackAI combines automatic trip organization, real-time flight tracking, AI-powered receipt scanning, and one-tap CSV exports. Unlike competitors, we offer unlimited receipt scanning, Gmail auto-import, and offline access in our Pro plan at just $11.99/month. It's the only app that handles both trip organization AND expense tracking seamlessly.</p>
+</div>
+<div class="feature-box">
+<h3>How does TripTrackAI save time on expense reports?</h3>
+<p>TripTrackAI automatically scans receipts with OCR, extracts merchant names, amounts, dates, and categories. Gmail integration finds Uber, Lyft, and hotel receipts automatically. Export everything to CSV in one tap. Business travelers save an average of 90% of time on expense reporting - what used to take 2 hours now takes 10 minutes.</p>
+</div>
+<div class="feature-box">
+<h3>Is TripTrackAI secure for corporate travel data?</h3>
+<p>Yes. TripTrackAI uses bank-level AES-256 encryption, OAuth 2.0 for Gmail connections, and is GDPR compliant. We never sell your data. All company travel information is encrypted at rest and in transit. Your receipts, itineraries, and personal information are completely secure.</p>
+</div>
+<div class="feature-box">
+<h3>Can I export expense reports for my finance team?</h3>
+<p>Yes. TripTrackAI Pro allows unlimited CSV and PDF exports. All receipts include merchant name, amount, date, category, and trip association. Perfect for submitting to finance teams or importing into accounting software like QuickBooks, Expensify, or SAP Concur.</p>
+</div>
+<div class="feature-box">
+<h3>How much does TripTrackAI cost for business travelers?</h3>
+<p>TripTrackAI offers a free plan with 3 trips and 10 receipts/month. Pro is $11.99/month or $99.99/year (save 30%) with unlimited trips, receipts, AI concierge, Gmail auto-import, and CSV exports. Team plans starting at $39.99/month coming soon with centralized billing and admin controls.</p>
+</div>
+<div class="feature-box">
+<h3>Does TripTrackAI integrate with expense management systems?</h3>
+<p>TripTrackAI exports to CSV format which can be imported into most expense management systems including Expensify, SAP Concur, QuickBooks, and Excel. Direct API integrations with major platforms coming in Q2 2026. The CSV export includes all fields needed for seamless import.</p>
+</div>
+</div>
+</div>
+
+<div class="cta-box">
+<h2>Ready to Transform Your Business Travel?</h2>
+<p>Join 5,000+ business travelers using TripTrackAI to save time and stay organized. Start free, upgrade anytime.</p>
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="cta-btn">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+Download TripTrackAI
+</a>
+<p style="margin-top:24px;font-size:14px;color:var(--text-3)">Free plan available • Pro: $11.99/month or $99.99/year</p>
+</div>
+</main>
+
+<footer class="foot">
+<div class="wrap foot-inner">
+<div class="foot-left">
+<div class="logo" style="font-size:18px">
+<img src="img/icon.png" alt="TripTrackAI" class="logo-icon" style="width:28px;height:28px">
+TripTrackAI
+</div>
+<p class="foot-sub">AI-powered travel organization.</p>
+</div>
+<div class="foot-right">
+<a href="/features">Features</a>
+<a href="/business">Business</a>
+<a href="/flight-tracker">Flight Tracker</a>
+<a href="/support">Support</a>
+<a href="/privacy">Privacy</a>
+<a href="/terms">Terms</a>
+</div>
+</div>
+<div class="wrap"><p class="foot-copy mono">&copy; 2026 TripTrackAI. All rights reserved.</p></div>
+</footer>
+
+</body>
+</html>

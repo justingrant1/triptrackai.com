@@ -1,7 +1,7 @@
 {
-  "name": "TripTrack",
-  "short_name": "TripTrack",
-  "description": "Every flight. Every hotel. One app. Zero effort.",
+  "name": "TripTrackAI",
+  "short_name": "TripTrackAI",
+  "description": "Best AI travel app. Automatic trip planning, real-time flight tracking, AI concierge.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",

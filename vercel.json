@@ -1,6 +1,26 @@
 {
   "rewrites": [
     {
+      "source": "/features",
+      "destination": "/features.html"
+    },
+    {
+      "source": "/business",
+      "destination": "/business.html"
+    },
+    {
+      "source": "/flight-tracker",
+      "destination": "/flight-tracker.html"
+    },
+    {
+      "source": "/ai-travel-assistant",
+      "destination": "/ai-travel-assistant.html"
+    },
+    {
+      "source": "/expense-tracker",
+      "destination": "/expense-tracker.html"
+    },
+    {
       "source": "/privacy",
       "destination": "/privacy.html"
     },

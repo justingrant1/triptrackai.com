@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://triptrack.ai/sitemap.xml
+Sitemap: https://triptrackai.com/sitemap.xml
