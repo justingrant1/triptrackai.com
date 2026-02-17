@@ -1,0 +1,697 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TripTrack — Travel. On autopilot.</title>
+<meta name="description" content="TripTrack detects your bookings, structures your trips, and tracks flights in real time — automatically. Built for people who travel often.">
+<meta name="keywords" content="travel automation, flight tracking, trip organizer, business travel, frequent traveler, real-time flight alerts, automatic itinerary, travel productivity">
+<meta name="author" content="TripTrack">
+<meta name="theme-color" content="#000000">
+<link rel="canonical" href="https://triptrack.ai/">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://triptrack.ai/">
+<meta property="og:title" content="TripTrack — Every Flight. Every Hotel. One App.">
+<meta property="og:description" content="TripTrack organizes your entire trip in one place. Flights, hotels, car rentals, and more — automatically pulled from your confirmation emails.">
+<meta property="og:image" content="https://triptrack.ai/img/home-tab-today-page.jpg">
+<meta property="og:site_name" content="TripTrack">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://triptrack.ai/">
+<meta name="twitter:title" content="TripTrack — Every Flight. Every Hotel. One App.">
+<meta name="twitter:description" content="TripTrack organizes your entire trip in one place. Flights, hotels, car rentals, and more — automatically pulled from your confirmation emails.">
+<meta name="twitter:image" content="https://triptrack.ai/img/home-tab-today-page.jpg">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="img/icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Preconnect & DNS Prefetch -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://apps.apple.com">
+
+<!-- Preload Critical Resources -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" as="style">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TNDTS15FS0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TNDTS15FS0');
+</script>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "TripTrack",
+  "applicationCategory": "TravelApplication",
+  "operatingSystem": "iOS",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "18000"
+  },
+  "description": "TripTrack organizes your entire trip in one place. Flights, hotels, car rentals, and more — automatically pulled from your confirmation emails."
+}
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Skip to main content -->
+<a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+<!-- NAV -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+<div class="wrap nav-inner">
+<a href="#" class="logo">
+<img src="img/icon.png" alt="TripTrack" class="logo-icon">
+TripTrack
+</a>
+<div class="nav-right">
+<a href="#how" class="nav-link">How It Works</a>
+<a href="#features" class="nav-link">Features</a>
+<a href="#pricing" class="nav-link">Pricing</a>
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="nav-btn">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+Get the App
+</a>
+<button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+</div>
+</div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+<div class="mobile-menu-inner">
+<button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+</button>
+<nav class="mobile-nav">
+<a href="#how" class="mobile-nav-link">How It Works</a>
+<a href="#features" class="mobile-nav-link">Features</a>
+<a href="#pricing" class="mobile-nav-link">Pricing</a>
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="mobile-nav-cta">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+Download on the App Store
+</a>
+</nav>
+</div>
+</div>
+
+<!-- HERO -->
+<main id="main-content">
+<section class="hero" aria-label="Hero section">
+<div class="hero-orb hero-orb-1"></div>
+<div class="hero-orb hero-orb-2"></div>
+<div class="wrap hero-wrap">
+<div class="hero-text">
+<div class="hero-badge anim">
+<span class="hero-badge-dot"></span>
+AI-powered travel
+</div>
+<h1 class="hero-title anim anim-d1">Travel. On autopilot.</h1>
+<p class="hero-sub anim anim-d2">TripTrack connects to your inbox, turns bookings into structured trips, and keeps every flight live and up to date. Automatically.</p>
+<p class="hero-sub-2 anim anim-d2">Everything organized. Everything current.<br>Built for people who travel often.</p>
+<div class="hero-ctas anim anim-d3">
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="cta-primary">
+Get TripTrack
+</a>
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="cta-secondary">
+Download on the App Store
+</a>
+</div>
+</div>
+<div class="hero-phones anim anim-d2">
+<div class="phone-glow"></div>
+<div class="phone-frame phone-main">
+<div class="phone-live-badge">
+<span class="live-dot"></span>
+Live
+</div>
+<img src="img/home-tab-today-page.jpg" 
+     srcset="img/home-tab-today-page.jpg 1x, img/home-tab-today-page.jpg 2x" 
+     alt="TripTrack real-time flight tracking" 
+     loading="eager" 
+     width="390" 
+     height="844">
+</div>
+<div class="phone-frame phone-secondary">
+<img src="img/your-trips-page.jpg" 
+     srcset="img/your-trips-page.jpg 1x, img/your-trips-page.jpg 2x" 
+     alt="TripTrack organized trips" 
+     loading="eager" 
+     width="390" 
+     height="844">
+</div>
+</div>
+</div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="proof-bar">
+<div class="wrap proof-inner">
+<div class="proof-item anim">
+<span class="proof-num mono">4.9</span>
+<span class="proof-label">App Store Rating</span>
+</div>
+<div class="proof-divider"></div>
+<div class="proof-item anim anim-d1">
+<span class="proof-num mono">18K+</span>
+<span class="proof-label">Active Travelers</span>
+</div>
+<div class="proof-divider"></div>
+<div class="proof-item anim anim-d2">
+<span class="proof-num mono">58K+</span>
+<span class="proof-label">Trips Tracked</span>
+</div>
+<div class="proof-divider"></div>
+<div class="proof-item anim anim-d3">
+<span class="proof-num">Real-Time</span>
+<span class="proof-label">Flight Updates</span>
+</div>
+</div>
+</section>
+
+<!-- THE PROBLEM -->
+<section class="problem-section">
+<div class="wrap">
+<h2 class="big-heading anim">You already booked the trip.<br><span class="gradient-text">Why are you still organizing it?</span></h2>
+<p class="big-sub anim anim-d1">Your flight confirmation is in one email.<br>Your hotel in another.<br>Your car somewhere else.</p>
+<p class="big-sub anim anim-d1" style="margin-top:1.5rem">The gate just changed.<br>And you're still searching your inbox.</p>
+<p class="big-sub anim anim-d2" style="margin-top:2rem;font-size:1.125rem;opacity:0.9">TripTrack brings everything together — automatically.</p>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+<div class="wrap">
+<p class="section-tag anim">HOW IT WORKS</p>
+<h2 class="big-heading anim anim-d1">From scattered bookings<br>to one organized trip.</h2>
+<div class="how-steps">
+<div class="how-step anim anim-d1">
+<div class="how-num-wrap">
+<div class="how-num mono">1</div>
+<div class="how-line"></div>
+</div>
+<div class="how-content">
+<h3>Import your bookings</h3>
+<p>Connect Gmail for automatic imports, forward confirmations, or add trips manually. TripTrack works your way.</p>
+</div>
+</div>
+<div class="how-step anim anim-d2">
+<div class="how-num-wrap">
+<div class="how-num mono">2</div>
+<div class="how-line"></div>
+</div>
+<div class="how-content">
+<h3>Your trip organizes itself</h3>
+<p>Flights, hotels, cars, trains — instantly structured into one complete timeline.</p>
+</div>
+</div>
+<div class="how-step anim anim-d3">
+<div class="how-num-wrap">
+<div class="how-num mono">3</div>
+</div>
+<div class="how-content">
+<h3>Everything stays current</h3>
+<p>Live flight status, gate changes, delays, weather, and instant alerts — always up to date, always in sync.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- WORKS YOUR WAY -->
+<section class="works-section">
+<div class="wrap">
+<p class="section-tag anim">WORKS YOUR WAY</p>
+<h2 class="big-heading anim anim-d1">Works the way you travel.</h2>
+<div class="works-grid">
+<div class="works-card anim anim-d1">
+<div class="works-icon">📨</div>
+<h3>Gmail Auto-Import</h3>
+<p>Connect Gmail once. Your trips build themselves.</p>
+</div>
+<div class="works-card anim anim-d2">
+<div class="works-icon">📧</div>
+<h3>Forward Emails</h3>
+<p>Forward confirmations to your TripTrack address. We add them instantly.</p>
+</div>
+<div class="works-card anim anim-d3">
+<div class="works-icon">✏️</div>
+<h3>Add Manually</h3>
+<p>Total control. Add anything, anytime.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FLIGHT INTELLIGENCE -->
+<section class="flight-section">
+<div class="wrap">
+<p class="section-tag anim">REAL-TIME FLIGHT INTELLIGENCE</p>
+<h2 class="big-heading anim anim-d1">Know everything about your flight.<br><span class="gradient-text">Before the airline tells you.</span></h2>
+<p class="big-sub anim anim-d1" style="margin-top:2.5rem;margin-bottom:3rem;text-align:center">Live gate changes, delays, ETAs, baggage — automatically.</p>
+<div class="flight-timeline anim anim-d2">
+<div class="ft-step ft-done"><span class="ft-dot"></span><span>Scheduled</span></div>
+<div class="ft-line ft-line-done"></div>
+<div class="ft-step ft-done"><span class="ft-dot"></span><span>Boarding</span></div>
+<div class="ft-line ft-line-done"></div>
+<div class="ft-step ft-active"><span class="ft-dot ft-dot-pulse"></span><span>In Flight</span></div>
+<div class="ft-line"></div>
+<div class="ft-step"><span class="ft-dot"></span><span>Landed</span></div>
+</div>
+<div class="flight-grid">
+<div class="flight-detail anim anim-d1">
+<div class="fd-icon">🚪</div>
+<h4>Live Gate Info</h4>
+<p>See gate changes before the terminal screens update.</p>
+</div>
+<div class="flight-detail anim anim-d2">
+<div class="fd-icon">⏱️</div>
+<h4>Delay Tracking</h4>
+<p>Departure delays, the second they happen.</p>
+</div>
+<div class="flight-detail anim anim-d3">
+<div class="fd-icon">🧳</div>
+<h4>Baggage Carousel</h4>
+<p>Know your carousel before you reach baggage claim.</p>
+</div>
+<div class="flight-detail anim anim-d1">
+<div class="fd-icon">📍</div>
+<h4>Live ETA</h4>
+<p>Real-time arrival — updated while you're in the air.</p>
+</div>
+<div class="flight-detail anim anim-d2">
+<div class="fd-icon">🔔</div>
+<h4>Instant Alerts</h4>
+<p>Instant alerts for gate changes, delays, and cancellations.</p>
+</div>
+<div class="flight-detail anim anim-d3">
+<div class="fd-icon">📊</div>
+<h4>Always Up to Date</h4>
+<p>Always current. Always accurate.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- APP SHOWCASE -->
+<section class="showcase-section">
+<div class="wrap">
+<p class="section-tag anim">SEE IT IN ACTION</p>
+<h2 class="big-heading anim anim-d1">Everything you need.<br>Nothing you don't.</h2>
+</div>
+<div class="showcase-scroll">
+<div class="showcase-card anim anim-d1">
+<div class="showcase-phone">
+<img src="img/home-tab-today-page.jpg" 
+     srcset="img/home-tab-today-page.jpg 1x, img/home-tab-today-page.jpg 2x" 
+     alt="Today View" 
+     loading="lazy" 
+     width="390" 
+     height="844">
+</div>
+<h3>Today View</h3>
+<p>Your upcoming reservations and live flight status — at a glance.</p>
+</div>
+<div class="showcase-card anim anim-d2">
+<div class="showcase-phone">
+<img src="img/your-trips-page.jpg" 
+     srcset="img/your-trips-page.jpg 1x, img/your-trips-page.jpg 2x" 
+     alt="Your Trips" 
+     loading="lazy" 
+     width="390" 
+     height="844">
+</div>
+<h3>Your Trips</h3>
+<p>Every reservation, beautifully organized in one timeline.</p>
+</div>
+<div class="showcase-card anim anim-d3">
+<div class="showcase-phone">
+<img src="img/ai-concierge-page.jpg" 
+     srcset="img/ai-concierge-page.jpg 1x, img/ai-concierge-page.jpg 2x" 
+     alt="AI Concierge" 
+     loading="lazy" 
+     width="390" 
+     height="844">
+</div>
+<h3>AI Concierge</h3>
+<p>Ask anything about your trip. Get instant answers.</p>
+</div>
+<div class="showcase-card anim anim-d1">
+<div class="showcase-phone">
+<img src="img/receipts-page.jpg" 
+     srcset="img/receipts-page.jpg 1x, img/receipts-page.jpg 2x" 
+     alt="Receipts" 
+     loading="lazy" 
+     width="390" 
+     height="844">
+</div>
+<h3>Receipt Tracking</h3>
+<p>Snap. Scan. Export. Done.</p>
+</div>
+</div>
+<div class="wrap">
+<div class="showcase-indicators" id="showcase-indicators">
+<span class="showcase-dot active"></span>
+<span class="showcase-dot"></span>
+<span class="showcase-dot"></span>
+<span class="showcase-dot"></span>
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+<div class="wrap">
+<p class="section-tag anim">LOVED BY TRAVELERS</p>
+<h2 class="big-heading anim anim-d1">Don't take our word for it.</h2>
+<div class="testimonials-grid">
+<div class="testimonial-card anim anim-d1">
+<div class="testimonial-stars">★★★★★</div>
+<p class="testimonial-text">"I know about gate changes before the airport boards update."</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar"></div>
+<div class="testimonial-info">
+<strong>Sarah M.</strong>
+<span>Frequent Business Traveler</span>
+</div>
+</div>
+</div>
+<div class="testimonial-card anim anim-d2">
+<div class="testimonial-stars">★★★★★</div>
+<p class="testimonial-text">"I connect Gmail once. Everything just appears."</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar"></div>
+<div class="testimonial-info">
+<strong>James K.</strong>
+<span>Digital Nomad</span>
+</div>
+</div>
+</div>
+<div class="testimonial-card anim anim-d3">
+<div class="testimonial-stars">★★★★★</div>
+<p class="testimonial-text">"My trips organize themselves."</p>
+<div class="testimonial-author">
+<div class="testimonial-avatar"></div>
+<div class="testimonial-info">
+<strong>Emily R.</strong>
+<span>VP of Sales</span>
+</div>
+</div>
+</div>
+<div class="testimonial-link anim">
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" target="_blank" rel="noopener">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+Rated 4.9 on the App Store — Read 18K+ reviews
+</a>
+</div>
+</div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section" id="features">
+<div class="wrap">
+<p class="section-tag anim">FEATURES</p>
+<h2 class="big-heading anim anim-d1">Built for people who<br>actually travel.</h2>
+<div class="features-grid">
+<div class="feature-card anim anim-d1">
+<div class="fc-icon" style="--accent:#3B82F6">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+</div>
+<h3>Automatic Import</h3>
+<p>Connect once. Trips appear automatically.</p>
+</div>
+<div class="feature-card anim anim-d2">
+<div class="fc-icon" style="--accent:#8B5CF6">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+</div>
+<h3>AI Concierge</h3>
+<p>Ask anything about your trip. Get instant answers.</p>
+</div>
+<div class="feature-card anim anim-d3">
+<div class="fc-icon" style="--accent:#10B981">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M16 2v20M2 12h20"/><circle cx="9" cy="7" r="2"/></svg>
+</div>
+<h3>Smart Receipts</h3>
+<p>AI extracts merchant, amount, and category automatically.</p>
+</div>
+<div class="feature-card anim anim-d1">
+<div class="fc-icon" style="--accent:#F59E0B">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+</div>
+<h3>Live Flight Alerts</h3>
+<p>Gate changes, delays, cancellations — instantly.</p>
+</div>
+<div class="feature-card anim anim-d2">
+<div class="fc-icon" style="--accent:#EC4899">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg>
+</div>
+<h3>One-Tap Export</h3>
+<p>Clean CSV and PDF reports in one tap.</p>
+</div>
+<div class="feature-card anim anim-d3">
+<div class="fc-icon" style="--accent:#06B6D4">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+</div>
+<h3>Destination Weather</h3>
+<p>Real forecasts for every stop on your trip.</p>
+</div>
+<!-- 3 MORE FEATURE CARDS -->
+<div class="feature-card anim anim-d1">
+<div class="fc-icon" style="--accent:#EF4444">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+</div>
+<h3>Tap-to-Copy</h3>
+<p>Confirmation numbers and details — one tap away.</p>
+</div>
+<div class="feature-card anim anim-d2">
+<div class="fc-icon" style="--accent:#14B8A6">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+</div>
+<h3>Trip Sharing</h3>
+<p>Share your itinerary. No app required.</p>
+</div>
+<div class="feature-card anim anim-d3">
+<div class="fc-icon" style="--accent:#A855F7">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+</div>
+<h3>All Major Reservation Types</h3>
+<p>Flights, hotels, cars, trains, meetings, events — all supported.</p>
+</div>
+</div>
+<div class="also-works anim">
+<p class="also-label">Works your way:</p>
+<div class="also-items">
+<span>📨 Gmail auto-import</span>
+<span>📧 Forward confirmations</span>
+<span>✏️ Manual entry</span>
+<span>🔐 Apple Sign-In</span>
+<span>📴 Offline access</span>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+<div class="wrap">
+<p class="section-tag anim">PRICING</p>
+<h2 class="big-heading anim anim-d1">Start free.<br>Upgrade when you travel more.</h2>
+<div class="price-cards">
+<div class="price-card anim anim-d1">
+<h3>Free</h3>
+<div class="price-amount"><span class="mono">$0</span></div>
+<p class="price-tagline">Beautiful trip organization — on your terms.</p>
+<ul>
+<li>Up to 3 active trips</li>
+<li>Unlimited reservations</li>
+<li>Forward booking emails to auto-add trips</li>
+<li>10 receipts per month</li>
+<li>3 AI questions per day</li>
+<li>Destination weather</li>
+<li>Push notifications</li>
+</ul>
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="price-btn">Start Free</a>
+</div>
+<div class="price-card price-card-featured anim anim-d2">
+<div class="price-badge">MOST POPULAR</div>
+<h3>Pro</h3>
+<div class="price-amount"><span class="mono">$11.99</span><span class="price-per">/mo</span></div>
+<p class="price-tagline">Or $99.99/year — save 30%</p>
+<ul>
+<li>Real-time flight updates</li>
+<li><strong>Unlimited</strong> trips &amp; reservations</li>
+<li><strong>Unlimited</strong> AI concierge</li>
+<li>Automatic Gmail import</li>
+<li>Receipt OCR scanning</li>
+<li>CSV &amp; PDF exports</li>
+<li>Priority support</li>
+</ul>
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="price-btn price-btn-pro">Start Pro</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+<div class="wrap">
+<p class="section-tag anim">FAQ</p>
+<h2 class="big-heading anim anim-d1">Questions?<br><span class="gradient-text">We've got answers.</span></h2>
+<div class="faq-list">
+<div class="faq-item anim anim-d1">
+<button class="faq-question">
+<h3>Is my email data safe?</h3>
+<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</button>
+<div class="faq-answer">
+<p>Yes. TripTrack uses secure OAuth connections — we never see or store your Gmail password. We only scan for travel confirmations and related receipts. Your data is encrypted and never sold.</p>
+</div>
+</div>
+<div class="faq-item anim anim-d2">
+<button class="faq-question">
+<h3>Does it work with Outlook or other email providers?</h3>
+<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</button>
+<div class="faq-answer">
+<p>TripTrack works best with Gmail auto-import. If you use Outlook or another provider, you can simply forward confirmations to your TripTrack address and they'll be added automatically.</p>
+</div>
+</div>
+<div class="faq-item anim anim-d3">
+<button class="faq-question">
+<h3>Can I share trips with people who don't have the app?</h3>
+<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</button>
+<div class="faq-answer">
+<p>Yes. You can share a clean, view-only trip link with anyone — no account or download required.</p>
+</div>
+</div>
+<div class="faq-item anim anim-d1">
+<button class="faq-question">
+<h3>What happens if I cancel Pro?</h3>
+<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</button>
+<div class="faq-answer">
+<p>You'll keep access until the end of your billing cycle. After that, your account moves to the free plan — your trips stay saved.</p>
+</div>
+</div>
+<div class="faq-item anim anim-d2">
+<button class="faq-question">
+<h3>Does it work internationally?</h3>
+<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</button>
+<div class="faq-answer">
+<p>Yes. TripTrack supports international airlines, hotels, trains, and reservations worldwide. Real-time updates work globally.</p>
+</div>
+</div>
+<div class="faq-item anim anim-d3">
+<button class="faq-question">
+<h3>Why is Pro worth it?</h3>
+<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</button>
+<div class="faq-answer">
+<p>Pro unlocks real-time flight updates, unlimited trips, AI concierge access, automatic Gmail import, receipt scanning, and exports — everything frequent travelers rely on.</p>
+</div>
+</div>
+<div class="faq-item anim anim-d1">
+<button class="faq-question">
+<h3>Is there an Android version?</h3>
+<svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+</button>
+<div class="faq-answer">
+<p>iOS is currently available. Android is coming soon.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+<div class="wrap">
+<div class="final-box anim">
+<img src="img/icon.png" alt="TripTrack" class="final-icon">
+<h2>Travel smarter.<br>Let TripTrack handle the rest.</h2>
+<p>Automatic trip organization. Real-time flight updates. Zero chaos.</p>
+<div class="hero-ctas">
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="cta-primary">
+Get TripTrack
+</a>
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="cta-secondary">
+Download on the App Store
+</a>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta" id="sticky-cta">
+<a href="https://apps.apple.com/app/triptrack-ai/id6758813711" class="sticky-cta-btn">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+Download App
+</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="foot" role="contentinfo">
+<div class="wrap foot-inner">
+<div class="foot-left">
+<div class="logo" style="font-size:18px">
+<img src="img/icon.png" alt="TripTrack" class="logo-icon" style="width:28px;height:28px">
+TripTrack
+</div>
+<p class="foot-sub">Your entire trip, one place.</p>
+<div class="social-links">
+<a href="#" class="social-link" aria-label="Twitter" title="Follow us on Twitter">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+</a>
+<a href="#" class="social-link" aria-label="Instagram" title="Follow us on Instagram">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+</a>
+<a href="#" class="social-link" aria-label="TikTok" title="Follow us on TikTok">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+</a>
+<a href="#" class="social-link" aria-label="LinkedIn" title="Follow us on LinkedIn">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+</a>
+</div>
+</div>
+<div class="foot-right">
+<a href="/support">Support</a>
+<a href="/privacy">Privacy</a>
+<a href="/terms">Terms</a>
+</div>
+</div>
+<div class="wrap"><p class="foot-copy mono">&copy; 2026 TripTrack. All rights reserved.</p></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
