@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
+
   // Check for reduced motion preference
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

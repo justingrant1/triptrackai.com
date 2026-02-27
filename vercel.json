@@ -38,6 +38,16 @@
       "source": "/home",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/download",
+      "destination": "https://apps.apple.com/us/app/triptrack-ai/id6758813711",
+      "permanent": false
+    },
+    {
+      "source": "/app",
+      "destination": "https://apps.apple.com/us/app/triptrack-ai/id6758813711",
+      "permanent": false
     }
   ],
   "headers": [
