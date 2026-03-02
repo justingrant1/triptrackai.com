@@ -462,9 +462,29 @@ a{color:inherit;text-decoration:none}
 /* Review Schema Stars */
 .review-stars{color:var(--amber);font-size:16px;letter-spacing:1px;display:inline-block}
 
+/* TRIP SHARING SECTION */
+.sharing-section{padding:60px 0;border-top:1px solid var(--border);background:var(--surface)}
+@media(min-width:640px){.sharing-section{padding:80px 0}}
+@media(min-width:1024px){.sharing-section{padding:100px 0}}
+.sharing-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:900px;margin:0 auto}
+@media(min-width:768px){.sharing-grid{grid-template-columns:1fr 1fr 1fr 1fr;gap:20px}}
+.sharing-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:28px 20px;text-align:center;transition:all 0.35s;position:relative;overflow:hidden}
+.sharing-card::before{content:'';position:absolute;inset:-1px;background:linear-gradient(135deg,rgba(20,184,166,0.3),rgba(59,130,246,0.2));border-radius:20px;opacity:0;transition:opacity 0.35s;z-index:0}
+.sharing-card:hover{border-color:rgba(255,255,255,0.15);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.4),0 0 0 1px rgba(255,255,255,0.1)}
+.sharing-card:hover::before{opacity:1}
+@media(hover:none){.sharing-card:hover{transform:none}}
+.sharing-card>*{position:relative;z-index:1}
+.sharing-icon{font-size:36px;margin-bottom:14px}
+@media(min-width:640px){.sharing-icon{font-size:40px;margin-bottom:16px}}
+.sharing-card h3{font-size:14px;font-weight:700;margin-bottom:6px;letter-spacing:-0.01em}
+@media(min-width:640px){.sharing-card h3{font-size:16px}}
+.sharing-card p{font-size:13px;color:var(--text-2);line-height:1.6}
+@media(min-width:640px){.sharing-card p{font-size:14px}}
+@media(hover:none){.sharing-card:active{border-color:rgba(255,255,255,0.15)}}
+
 /* Print Styles */
 @media print{
   .nav,.mobile-menu,.hero-orb,.skip-to-main,.foot,.sticky-cta,.breadcrumb{display:none}
   body{background:#fff;color:#000}
-  .hero,.proof-bar,.problem-section,.how-section,.works-section,.flight-section,.showcase-section,.testimonials-section,.features-section,.pricing-section,.final-cta{page-break-inside:avoid}
+  .hero,.proof-bar,.problem-section,.how-section,.works-section,.flight-section,.showcase-section,.sharing-section,.testimonials-section,.features-section,.pricing-section,.final-cta{page-break-inside:avoid}
 }
