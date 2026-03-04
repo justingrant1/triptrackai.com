@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get TripTrackAI — Scan, Email, or Text the Link</title>
+<meta name="description" content="Get TripTrackAI on your iPhone. Scan the QR code, or send yourself a link via email or text.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#000000">
+<link rel="canonical" href="https://triptrackai.com/get-app">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="img/icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- QR Code library (synchronous, no callbacks) -->
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js" crossorigin="anonymous"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GF834EEVCX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GF834EEVCX');
+</script>
+
+<!-- AppsFlyer OneLink Smart Script -->
+<script src="https://onelinksmartscript.appsflyer.com/onelink-smart-script-latest.js"></script>
+
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ── GET APP PAGE ─────────────────────────────────────────────────────── */
+
+  .get-app-page {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 100px 24px 80px;
+    position: relative;
+  }
+
+  /* Background orbs */
+  .get-app-page::before {
+    content: '';
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(59,130,246,0.05) 0%, rgba(139,92,246,0.03) 40%, transparent 70%);
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .get-app-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* Back link */
+  .get-app-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--text-3);
+    font-weight: 500;
+    margin-bottom: 48px;
+    transition: color 0.3s;
+    padding: 4px 0;
+  }
+  .get-app-back:hover { color: var(--text-2); }
+  .get-app-back svg { transition: transform 0.3s; }
+  .get-app-back:hover svg { transform: translateX(-3px); }
+
+  /* Header */
+  .get-app-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .get-app-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    margin: 0 auto 24px;
+    box-shadow: 0 8px 32px rgba(59,130,246,0.2), 0 0 0 1px rgba(255,255,255,0.08);
+    display: block;
+  }
+
+  .get-app-title {
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    margin-bottom: 14px;
+  }
+
+  .get-app-sub {
+    font-size: clamp(15px, 2vw, 18px);
+    color: var(--text-2);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+
+  /* Main grid */
+  .get-app-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+
+  @media (min-width: 760px) {
+    .get-app-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+  }
+
+  /* Cards */
+  .get-app-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 36px 32px;
+    transition: border-color 0.3s;
+    position: relative;
+    overflow: visible;
+  }
+
+  .get-app-card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(135deg, rgba(59,130,246,0.25), rgba(139,92,246,0.15));
+    border-radius: 24px;
+    opacity: 0;
+    transition: opacity 0.35s;
+    z-index: 0;
+  }
+
+  .get-app-card:hover { border-color: rgba(255,255,255,0.12); }
+  .get-app-card:hover::before { opacity: 1; }
+  .get-app-card > * { position: relative; z-index: 1; }
+
+  .get-app-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: var(--blue);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .get-app-card-label::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--blue);
+    box-shadow: 0 0 6px rgba(59,130,246,0.6);
+  }
+
+  /* ── QR CARD ─────────────────────────────────────────────────────────── */
+  .qr-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .qr-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .qr-canvas-wrap {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.1);
+    position: relative;
+  }
+
+  #qr-canvas {
+    display: block;
+    border-radius: 8px;
+  }
+
+  /* TripTrackAI logo overlay in QR center */
+  .qr-logo-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: #fff;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .qr-logo-overlay img {
+    width: 100%;
+    height: 100%;
+    border-radius: 7px;
+    display: block;
+  }
+
+  .qr-hint {
+    font-size: 13px;
+    color: var(--text-3);
+    line-height: 1.5;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .qr-hint strong {
+    color: var(--text-2);
+    font-weight: 600;
+  }
+
+  /* ── SEND LINK CARD ───────────────────────────────────────────────────── */
+  .send-card h3 {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+    color: #fff;
+  }
+
+  .send-card p {
+    font-size: 14px;
+    color: var(--text-2);
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  /* Tab switcher */
+  .send-tabs {
+    display: flex;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 4px;
+    margin-bottom: 20px;
+    gap: 4px;
+  }
+
+  .send-tab {
+    flex: 1;
+    padding: 9px 12px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-3);
+    cursor: pointer;
+    transition: all 0.25s;
+    text-align: center;
+    border: none;
+    background: none;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .send-tab.active {
+    background: var(--blue);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(59,130,246,0.4);
+  }
+
+  .send-tab:not(.active):hover {
+    color: var(--text-2);
+    background: rgba(255,255,255,0.05);
+  }
+
+  /* Input group */
+  .send-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .send-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .send-input-icon {
+    position: absolute;
+    left: 16px;
+    color: var(--text-3);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .send-input {
+    width: 100%;
+    padding: 14px 16px 14px 44px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 15px;
+    color: var(--text);
+    font-family: inherit;
+    transition: all 0.3s;
+    min-height: 52px;
+  }
+
+  .send-input:focus {
+    outline: none;
+    border-color: var(--blue);
+    background: rgba(59,130,246,0.05);
+    box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+  }
+
+  .send-input::placeholder { color: var(--text-3); }
+
+  .send-btn {
+    width: 100%;
+    padding: 15px 24px;
+    background: var(--blue);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: inherit;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .send-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+    transition: left 0.5s;
+  }
+
+  .send-btn:hover {
+    background: #2563EB;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(59,130,246,0.4);
+  }
+
+  .send-btn:hover::after { left: 100%; }
+
+  .send-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .send-btn:active:not(:disabled) { transform: scale(0.98); }
+
+  /* Success / error states */
+  .send-feedback {
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 10px 14px;
+    border-radius: 10px;
+    display: none;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .send-feedback.success {
+    display: flex;
+    background: rgba(16,185,129,0.1);
+    border: 1px solid rgba(16,185,129,0.2);
+    color: #34D399;
+  }
+
+  .send-feedback.error {
+    display: flex;
+    background: rgba(239,68,68,0.1);
+    border: 1px solid rgba(239,68,68,0.2);
+    color: #F87171;
+  }
+
+  .send-note {
+    font-size: 12px;
+    color: var(--text-3);
+    text-align: center;
+    margin-top: 16px;
+    line-height: 1.5;
+  }
+
+  /* ── DIVIDER ─────────────────────────────────────────────────────────── */
+  .get-app-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 28px 0;
+  }
+
+  .get-app-divider::before,
+  .get-app-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .get-app-divider span {
+    font-size: 12px;
+    color: var(--text-3);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  /* ── APP STORE BUTTON ────────────────────────────────────────────────── */
+  .appstore-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 15px 24px;
+    background: #fff;
+    color: #000;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: all 0.3s;
+    min-height: 54px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+  }
+
+  .appstore-btn:hover {
+    background: #f0f0f0;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 30px rgba(255,255,255,0.12);
+  }
+
+  .appstore-btn:active { transform: scale(0.98); }
+
+  .appstore-btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.2;
+  }
+
+  .appstore-btn-sub {
+    font-size: 10px;
+    font-weight: 500;
+    opacity: 0.6;
+    letter-spacing: 0.02em;
+  }
+
+  .appstore-btn-main {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+  }
+
+  /* ── RATING BADGE ────────────────────────────────────────────────────── */
+  .get-app-rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+    padding: 14px 24px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .get-app-rating-stars {
+    color: var(--amber);
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  .get-app-rating-text {
+    font-size: 13px;
+    color: var(--text-2);
+    font-weight: 500;
+  }
+
+  .get-app-rating-text strong {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  /* ── MOBILE REDIRECT ─────────────────────────────────────────────────── */
+  .mobile-redirect-banner {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background: rgba(59,130,246,0.08);
+    border: 1px solid rgba(59,130,246,0.2);
+    border-radius: 16px;
+    margin-bottom: 32px;
+  }
+
+  .mobile-redirect-banner p {
+    font-size: 14px;
+    color: var(--text-2);
+    margin-bottom: 12px;
+  }
+
+  @media (max-width: 639px) {
+    .get-app-page { padding: 80px 20px 40px; }
+    .get-app-card { padding: 28px 24px; }
+    .get-app-header { margin-bottom: 40px; }
+    .get-app-back { margin-bottom: 32px; }
+  }
+
+  /* Loading spinner for QR */
+  .qr-loading {
+    width: 240px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.03);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+  }
+
+  .qr-spinner {
+    width: 32px;
+    height: 32px;
+    border: 3px solid var(--border);
+    border-top-color: var(--blue);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Sending spinner */
+  .btn-spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: none;
+  }
+
+  .send-btn.loading .btn-spinner { display: block; }
+  .send-btn.loading .btn-label { display: none; }
+</style>
+</head>
+<body>
+
+<!-- Skip to main content -->
+<a href="#main-content" class="skip-to-main">Skip to main content</a>
+
+<!-- NAV -->
+<nav class="nav scrolled" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="wrap nav-inner">
+    <a href="/" class="logo">
+      <img src="img/icon.png" alt="TripTrackAI" class="logo-icon">
+      TripTrackAI
+    </a>
+    <div class="nav-right">
+      <a href="/#how" class="nav-link">How It Works</a>
+      <a href="/#features" class="nav-link">Features</a>
+      <a href="/#pricing" class="nav-link">Pricing</a>
+      <a href="https://apps.apple.com/us/app/triptrack-ai/id6758813711" class="nav-btn" id="nav-appstore-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Get the App
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content">
+  <div class="get-app-page">
+    <div class="get-app-inner">
+
+      <!-- Back link -->
+      <a href="/" class="get-app-back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Back to TripTrackAI
+      </a>
+
+      <!-- Header -->
+      <div class="get-app-header">
+        <img src="img/icon.png" alt="TripTrackAI" class="get-app-icon">
+        <h1 class="get-app-title">Get TripTrackAI<br>on your phone</h1>
+        <p class="get-app-sub">Scan the QR code with your iPhone camera, or send yourself a link — you'll be in the App Store in seconds.</p>
+      </div>
+
+      <!-- Main grid -->
+      <div class="get-app-grid">
+
+        <!-- QR Code Card -->
+        <div class="get-app-card qr-card">
+          <div class="get-app-card-label">Scan with your iPhone</div>
+
+          <div class="qr-wrapper">
+            <div class="qr-canvas-wrap" id="qr-canvas-wrap">
+              <!-- Loading placeholder shown until QR renders -->
+              <div id="qr-loading" style="width: 240px; height: 240px; display: none; align-items: center; justify-content: center;">
+                <div class="qr-spinner"></div>
+              </div>
+              <img id="qr-img" width="240" height="240" style="border-radius: 8px; display: block;" alt="QR code to download TripTrackAI" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+              <div class="qr-logo-overlay" id="qr-logo" style="display: none;">
+                <img src="img/icon.png" alt="TripTrackAI">
+              </div>
+            </div>
+          </div>
+
+          <p class="qr-hint">
+            <strong>Open your iPhone camera</strong> and point it at the code — no app needed. Tap the notification to open the App Store.
+          </p>
+        </div>
+
+        <!-- Send Link Card -->
+        <div class="get-app-card send-card">
+          <div class="get-app-card-label">Send yourself the link</div>
+
+          <h3>Get the link on your phone</h3>
+          <p>Enter your email or phone number and we'll send you a direct link to download TripTrackAI.</p>
+
+          <!-- Tab switcher -->
+          <div class="send-tabs" role="tablist">
+            <button class="send-tab active" id="tab-email" role="tab" aria-selected="true" aria-controls="panel-email">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email
+            </button>
+            <button class="send-tab" id="tab-sms" role="tab" aria-selected="false" aria-controls="panel-sms">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+              Text
+            </button>
+          </div>
+
+          <!-- Email panel -->
+          <div id="panel-email" role="tabpanel">
+            <div class="send-input-group">
+              <div class="send-input-wrap">
+                <span class="send-input-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </span>
+                <input type="email" id="email-input" class="send-input" placeholder="your@email.com" autocomplete="email" inputmode="email" aria-label="Email address">
+              </div>
+            </div>
+            <button class="send-btn" id="email-send-btn" type="button">
+              <span class="btn-label">Send me the link</span>
+              <div class="btn-spinner"></div>
+            </button>
+            <div class="send-feedback" id="email-feedback" role="alert" aria-live="polite"></div>
+          </div>
+
+          <!-- SMS panel -->
+          <div id="panel-sms" role="tabpanel" style="display:none;">
+            <div class="send-input-group">
+              <div class="send-input-wrap">
+                <span class="send-input-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                </span>
+                <input type="tel" id="sms-input" class="send-input" placeholder="+1 (555) 000-0000" autocomplete="tel" inputmode="tel" aria-label="Phone number">
+              </div>
+            </div>
+            <button class="send-btn" id="sms-send-btn" type="button">
+              <span class="btn-label">Text me the link</span>
+              <div class="btn-spinner"></div>
+            </button>
+            <div class="send-feedback" id="sms-feedback" role="alert" aria-live="polite"></div>
+          </div>
+
+          <p class="send-note">No spam. Just the link. We don't store your info.</p>
+
+          <!-- Divider -->
+          <div class="get-app-divider">
+            <span>or open directly</span>
+          </div>
+
+          <!-- App Store button -->
+          <a href="https://apps.apple.com/us/app/triptrack-ai/id6758813711" class="appstore-btn" id="appstore-direct-btn" target="_blank" rel="noopener">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <div class="appstore-btn-text">
+              <span class="appstore-btn-sub">Download on the</span>
+              <span class="appstore-btn-main">App Store</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Rating badge -->
+      <div class="get-app-rating">
+        <span class="get-app-rating-stars">★★★★★</span>
+        <span class="get-app-rating-text"><strong>4.9</strong> · 18,000+ reviews on the App Store</span>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="foot" role="contentinfo">
+  <div class="wrap foot-inner">
+    <div class="foot-left">
+      <div class="logo" style="font-size:18px">
+        <img src="img/icon.png" alt="TripTrackAI" class="logo-icon" style="width:28px;height:28px">
+        TripTrackAI
+      </div>
+      <p class="foot-sub">AI-powered travel organization.</p>
+    </div>
+    <div class="foot-right">
+      <a href="/support">Support</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </div>
+  </div>
+  <div class="wrap"><p class="foot-copy mono">&copy; 2026 TripTrackAI. All rights reserved.</p></div>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+
+  // ── Config ─────────────────────────────────────────────────────────────
+  var APP_STORE_FALLBACK = 'https://apps.apple.com/us/app/triptrack-ai/id6758813711';
+  var APP_LINK = 'https://triptrackai.onelink.me/gx2n';
+  var ZAPIER_WEBHOOK = 'https://hooks.zapier.com/hooks/catch/26690655/u0nevn7/';
+  var appStoreURL = APP_STORE_FALLBACK;
+
+  function initOneLink() {
+    if (!window.AF_SMART_SCRIPT || !window.AF_SMART_SCRIPT.generateOneLinkURL) {
+      setTimeout(initOneLink, 100);
+      return;
+    }
+    var result = window.AF_SMART_SCRIPT.generateOneLinkURL({
+      oneLinkURL: 'https://triptrackai.onelink.me/gx2n',
+      afParameters: {
+        mediaSource: { keys: ['utm_source'], defaultValue: 'website_getapp' },
+        campaign: { keys: ['utm_campaign'], defaultValue: 'get_app_page' },
+        channel: { keys: ['utm_medium'], defaultValue: 'desktop' },
+        afCustom: [{ paramKey: 'af_ss_ui', defaultValue: 'true' }]
+      }
+    });
+    if (result && result.clickURL) {
+      appStoreURL = result.clickURL;
+      var btn = document.getElementById('appstore-direct-btn');
+      if (btn) btn.href = appStoreURL;
+      var navBtn = document.getElementById('nav-appstore-btn');
+      if (navBtn) navBtn.href = appStoreURL;
+      updateQRWithTrackedURL(appStoreURL);
+    }
+    if (window.AF_SMART_SCRIPT.fireImpressionsLink) {
+      setTimeout(function() { window.AF_SMART_SCRIPT.fireImpressionsLink(); }, 1000);
+    }
+  }
+
+  // ── QR rendering (qrcode-generator library — synchronous) ─────────────
+  function renderQR(url) {
+    if (typeof qrcode === 'undefined') return;
+    try {
+      var qr = qrcode(0, 'H');
+      qr.addData(url);
+      qr.make();
+      var dataURL = qr.createDataURL(6, 2);
+      var img = document.getElementById('qr-img');
+      if (!img) return;
+      img.src = dataURL;
+      var loading = document.getElementById('qr-loading');
+      var logo = document.getElementById('qr-logo');
+      if (loading) loading.style.display = 'none';
+      img.style.display = 'block';
+      if (logo) logo.style.display = 'block';
+    } catch(e) {
+      try {
+        var qr2 = qrcode(10, 'M');
+        qr2.addData(url);
+        qr2.make();
+        var dataURL2 = qr2.createDataURL(6, 2);
+        var img2 = document.getElementById('qr-img');
+        if (!img2) return;
+        img2.src = dataURL2;
+        var loading2 = document.getElementById('qr-loading');
+        var logo2 = document.getElementById('qr-logo');
+        if (loading2) loading2.style.display = 'none';
+        img2.style.display = 'block';
+        if (logo2) logo2.style.display = 'block';
+      } catch(e2) { /* silent fail */ }
+    }
+  }
+
+  function renderInitialQR() {
+    if (typeof qrcode !== 'undefined') {
+      renderQR(APP_STORE_FALLBACK);
+    } else {
+      var t = setInterval(function() {
+        if (typeof qrcode !== 'undefined') {
+          clearInterval(t);
+          renderQR(APP_STORE_FALLBACK);
+        }
+      }, 50);
+    }
+  }
+
+  function updateQRWithTrackedURL(trackedURL) {
+    renderQR(trackedURL);
+  }
+
+  // ── Tab switching ──────────────────────────────────────────────────────
+  var tabEmail = document.getElementById('tab-email');
+  var tabSms = document.getElementById('tab-sms');
+  var panelEmail = document.getElementById('panel-email');
+  var panelSms = document.getElementById('panel-sms');
+
+  function switchTab(tab) {
+    if (tab === 'email') {
+      tabEmail.classList.add('active');
+      tabEmail.setAttribute('aria-selected', 'true');
+      tabSms.classList.remove('active');
+      tabSms.setAttribute('aria-selected', 'false');
+      panelEmail.style.display = 'block';
+      panelSms.style.display = 'none';
+      document.getElementById('email-input').focus();
+    } else {
+      tabSms.classList.add('active');
+      tabSms.setAttribute('aria-selected', 'true');
+      tabEmail.classList.remove('active');
+      tabEmail.setAttribute('aria-selected', 'false');
+      panelSms.style.display = 'block';
+      panelEmail.style.display = 'none';
+      document.getElementById('sms-input').focus();
+    }
+  }
+
+  tabEmail.addEventListener('click', function() { switchTab('email'); });
+  tabSms.addEventListener('click', function() { switchTab('sms'); });
+
+  [tabEmail, tabSms].forEach(function(tab) {
+    tab.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        switchTab(tab === tabEmail ? 'sms' : 'email');
+      }
+    });
+  });
+
+  // ── Validation helpers ─────────────────────────────────────────────────
+  function isValidEmail(v) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+  }
+
+  function isValidPhone(v) {
+    var digits = v.replace(/\D/g, '');
+    return digits.length >= 10 && digits.length <= 15;
+  }
+
+  function showFeedback(el, type, msg) {
+    el.className = 'send-feedback ' + type;
+    el.innerHTML = (type === 'success'
+      ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>'
+      : '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>'
+    ) + '<span>' + msg + '</span>';
+  }
+
+  // ── Send Email ─────────────────────────────────────────────────────────
+  var emailBtn = document.getElementById('email-send-btn');
+  var emailInput = document.getElementById('email-input');
+  var emailFeedback = document.getElementById('email-feedback');
+
+  function sendEmail() {
+    var val = emailInput.value.trim();
+    emailFeedback.className = 'send-feedback';
+
+    if (!val) {
+      showFeedback(emailFeedback, 'error', 'Please enter your email address.');
+      emailInput.focus();
+      return;
+    }
+    if (!isValidEmail(val)) {
+      showFeedback(emailFeedback, 'error', 'Please enter a valid email address.');
+      emailInput.focus();
+      return;
+    }
+
+    emailBtn.classList.add('loading');
+    emailBtn.disabled = true;
+
+    sendViaZapier({ type: 'email', to: val, link: APP_LINK }, function(ok) {
+      emailBtn.classList.remove('loading');
+      emailBtn.disabled = false;
+      if (ok) {
+        showFeedback(emailFeedback, 'success', 'Link sent! Check your inbox.');
+        emailInput.value = '';
+        if (window.gtag) gtag('event', 'get_app_email_sent', { method: 'email' });
+      } else {
+        showFeedback(emailFeedback, 'error', 'Something went wrong — opening your email app instead…');
+        var subject = encodeURIComponent('Your TripTrackAI download link');
+        var body = encodeURIComponent('Here\'s your link to download TripTrackAI:\n\n' + APP_LINK + '\n\nTripTrackAI — Travel. On autopilot.');
+        setTimeout(function() {
+          window.location.href = 'mailto:' + encodeURIComponent(val) + '?subject=' + subject + '&body=' + body;
+        }, 1200);
+        if (window.gtag) gtag('event', 'get_app_email_fallback', { method: 'email' });
+      }
+    });
+  }
+
+  // ── OS / platform detection ────────────────────────────────────────────
+  var IOS_STORE_URL = 'https://apps.apple.com/us/app/triptrack-ai/id6758813711';
+
+  // ── Send SMS ───────────────────────────────────────────────────────────
+  var smsBtn = document.getElementById('sms-send-btn');
+  var smsInput = document.getElementById('sms-input');
+  var smsFeedback = document.getElementById('sms-feedback');
+
+  function sendSMS() {
+    var val = smsInput.value.trim();
+    smsFeedback.className = 'send-feedback';
+
+    if (!val) {
+      showFeedback(smsFeedback, 'error', 'Please enter your phone number.');
+      smsInput.focus();
+      return;
+    }
+    if (!isValidPhone(val)) {
+      showFeedback(smsFeedback, 'error', 'Please enter a valid phone number (10+ digits).');
+      smsInput.focus();
+      return;
+    }
+
+    var cleanPhone = val.replace(/\D/g, '');
+
+    smsBtn.classList.add('loading');
+    smsBtn.disabled = true;
+
+    sendViaZapier({ type: 'sms', to: cleanPhone, link: APP_LINK }, function(ok) {
+      smsBtn.classList.remove('loading');
+      smsBtn.disabled = false;
+      if (ok) {
+        showFeedback(smsFeedback, 'success', 'Text sent! Check your messages.');
+        smsInput.value = '';
+        if (window.gtag) gtag('event', 'get_app_sms_sent', { method: 'sms' });
+      } else {
+        showFeedback(smsFeedback, 'error', 'Something went wrong — opening Messages instead…');
+        var msg = encodeURIComponent('Download TripTrackAI: ' + APP_LINK);
+        setTimeout(function() {
+          window.location.href = 'sms:' + cleanPhone + '?body=' + msg;
+        }, 1200);
+        if (window.gtag) gtag('event', 'get_app_sms_fallback', { method: 'sms' });
+      }
+    });
+  }
+
+  // ── Zapier webhook ─────────────────────────────────────────────────────
+  function sendViaZapier(payload, callback) {
+    var body = new URLSearchParams();
+    body.append('type', payload.type);
+    body.append('to', payload.to);
+    body.append('link', payload.link);
+    fetch(ZAPIER_WEBHOOK, {
+      method: 'POST',
+      body: body
+    })
+    .then(function(res) { callback(res.ok); })
+    .catch(function() { callback(false); });
+  }
+
+  // ── Button click handlers ──────────────────────────────────────────────
+  emailBtn.addEventListener('click', sendEmail);
+  smsBtn.addEventListener('click', sendSMS);
+
+  emailInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') sendEmail();
+  });
+  smsInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') sendSMS();
+  });
+
+  // ── Phone number formatting ────────────────────────────────────────────
+  smsInput.addEventListener('input', function() {
+    var digits = this.value.replace(/\D/g, '');
+    if (digits.length <= 10 && !this.value.startsWith('+')) {
+      var formatted = digits;
+      if (digits.length > 6) {
+        formatted = '(' + digits.slice(0,3) + ') ' + digits.slice(3,6) + '-' + digits.slice(6,10);
+      } else if (digits.length > 3) {
+        formatted = '(' + digits.slice(0,3) + ') ' + digits.slice(3);
+      } else if (digits.length > 0) {
+        formatted = '(' + digits;
+      }
+      this.value = formatted;
+    }
+  });
+
+  // ── Mobile detection — redirect to App Store directly ─────────────────
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if (isMobile) {
+    window.location.replace(APP_STORE_FALLBACK);
+  }
+
+  // ── Init ───────────────────────────────────────────────────────────────
+  renderInitialQR();
+  initOneLink();
+
+  // ── Nav scroll effect ──────────────────────────────────────────────────
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 20) {
+      nav.classList.add('scrolled');
+    }
+  });
+
+})();
+</script>
+
+</body>
+</html>

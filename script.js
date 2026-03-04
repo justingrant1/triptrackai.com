@@ -137,6 +137,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Desktop CTA → redirect to /get-app page
+  // Mobile users → existing App Store behavior is preserved (href on the anchor)
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  if (!isMobile) {
+    document.querySelectorAll('.cta-primary, .cta-secondary').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.location.href = '/get-app';
+      });
+    });
+  }
+
   // Sticky mobile CTA
   var stickyCta = document.getElementById('sticky-cta');
   var heroSection = document.querySelector('.hero');
