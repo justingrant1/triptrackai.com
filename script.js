@@ -141,11 +141,26 @@ document.addEventListener('DOMContentLoaded', function() {
   // Mobile users → existing App Store behavior is preserved (href on the anchor)
   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   if (!isMobile) {
-    document.querySelectorAll('.cta-primary, .cta-secondary').forEach(function(btn) {
-      btn.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.location.href = '/get-app';
-      });
+    // All App Store CTAs on desktop redirect to /get-app instead:
+    // nav "Get the App" button, hero CTAs, pricing buttons, comparison CTA, testimonial link
+    var desktopCtaSelectors = [
+      '.nav-btn',
+      '.cta-primary',
+      '.cta-secondary',
+      '.price-btn',
+      '.why-cta a',
+      '.testimonial-link a'
+    ].join(', ');
+
+    document.querySelectorAll(desktopCtaSelectors).forEach(function(btn) {
+      // Only intercept links that point to the App Store
+      var href = btn.getAttribute('href') || '';
+      if (href.indexOf('apps.apple.com') !== -1 || href.indexOf('onelink') !== -1) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.location.href = '/get-app';
+        });
+      }
     });
   }
 
